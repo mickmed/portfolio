@@ -16,6 +16,7 @@ class AuthenticationController < ApplicationController
   
   # GET /auth/verify
   def verify
+   
     render json: @current_user, status: :ok
   end
 
@@ -23,6 +24,6 @@ class AuthenticationController < ApplicationController
   private
 
   def login_params
-    params.require(:auth).permit(:username, :password)
+    params.require(:auth).permit(:username, :email, :password)
   end
 end

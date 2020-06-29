@@ -36,6 +36,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   def destroy
     @project.destroy
+    render json: @project
   end
 
   private
@@ -46,6 +47,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name)
+      params.require(:project).permit(:name, :subtitle, :img_url, :site_url)
     end
 end

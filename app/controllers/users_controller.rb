@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
+    puts 'userparams', params[:user]
     @user = User.new(user_params)
     
     if @user.save
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
+    puts 'userparams', params[:username]
     if @user.update(user_params)
       render json: @user
     else
