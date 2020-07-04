@@ -27,11 +27,20 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   def update
     if @project.update(project_params)
+      if params.has_key?(:technologies)
+        puts 'wtf', params[:technologies]
+        @project.technologies.clear
+        params[:technologies].each do |i|
+          puts 'llll', i
+          @project.technologies << Technology.find(i)
+        end
+      end
       render json: @project
     else
       render json: @project.errors, status: :unprocessable_entity
     end
   end
+
 
   # DELETE /projects/1
   def destroy
@@ -47,6 +56,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :subtitle, :img_url, :site_url)
+      params.require(:project).permit(:name, :subtitle, :img_url, :site_url, :github_url, :technologies=>[])
     end
 end

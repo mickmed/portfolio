@@ -26,6 +26,9 @@ class TechnologiesController < ApplicationController
 
   # PATCH/PUT /technologies/1
   def update
+    @project = Project.find(params[:project_id])
+    
+    @technology.projects << @project
     if @technology.update(technology_params)
       render json: @technology
     else
