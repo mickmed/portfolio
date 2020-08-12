@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Technology.destroy_all
+Project.destroy_all
+User.destroy_all
+
 
 technologies = Technology.create!([
     {name: 'Javascript', icon_url:'javascript.svg'},
@@ -38,4 +42,4 @@ projects = Project.create!([
 
 ])
 
-user = User.create!([{username:'mickmed', email:'mick@mick.com', password_digest:'password'}])
+user = User.create!([{username:'mickmed', email:'mick@mick.com', password:'password'}])
