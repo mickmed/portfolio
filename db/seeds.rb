@@ -37,3 +37,5 @@ projects = Project.create!([
     },
 
 ])
+
+user = User.create!([{username:'mickmed', email:'mick@mick.com', password_digest:'password'}])
