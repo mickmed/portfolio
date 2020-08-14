@@ -16,7 +16,7 @@ This is the backend for my portfolio site
 <br>
 
 ### &#x1F3E1; Deployed
-- [heroku]("https://portfolio-server-mick.herokuapp.com")
+- [heroku](https://portfolio-server-mick.herokuapp.com)
 
 <br>
 
