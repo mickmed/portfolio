@@ -1,24 +1,24 @@
-# README
+***Mick Roth***
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Portfolio Server
 
-* Ruby version
+This is the backend for my portfolio site
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+### &#127803; Technologies	
+- Ruby on Rails
+- PostgreSQL
+- BCrypt
+- JWT
 
-* Database initialization
+<br>
 
-* How to run the test suite
+### &#x1F3E1; Deployed
+- [heroku]("https://portfolio-server-mick.herokuapp.com")
 
-* Services (job queues, cache servers, search engines, etc.)
+<br>
 
-* Deployment instructions
 
-* ...
+
