@@ -35,7 +35,7 @@ projects = Project.create!([
     {
         name: 'Mick\'s Math Mental', 
         subtitle: 'Test your mental arithmetic against the timer', 
-        site_url: 'http://micks-mental-math',  
+        site_url: 'http://micks-mental-math.surge.sh',  
         github_url:'https://github.com/mickmed/mental-math-master', 
         img_url:'math-game.png' 
     },
