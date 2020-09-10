@@ -28,7 +28,7 @@ projects = Project.create!([
     {
         name: 'NYC Trees', 
         subtitle: 'Discover the trees of NYC streets',  
-        site_url: 'https://psychelic-plantation.surge.sh', 
+        site_url: 'https://psychedelic-plantation.surge.sh', 
         github_url:'https://github.com/mickmed/mental-math-master', 
         img_url:'nyc-trees1.png' 
     },
