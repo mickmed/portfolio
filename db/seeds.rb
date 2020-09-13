@@ -30,14 +30,15 @@ projects = Project.create!([
         subtitle: 'Discover the trees of NYC streets',  
         site_url: 'https://psychedelic-plantation.surge.sh', 
         github_url:'https://github.com/mickmed/mental-math-master', 
-        img_url:'nyc-trees1.png' 
+        img_url:'nyc-trees1.png',
+        
     },
     {
         name: 'Mick\'s Math Mental', 
         subtitle: 'Test your mental arithmetic against the timer', 
         site_url: 'http://micks-mental-math.surge.sh',  
         github_url:'https://github.com/mickmed/mental-math-master', 
-        img_url:'math-game.png' 
+        img_url:'math-game1.png' 
     },
 
 ])

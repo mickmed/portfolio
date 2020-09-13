@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :update, :destroy]
+  before_action :set_project, only: %i[show update destroy]
 
   # GET /projects
   def index
@@ -10,7 +12,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
-    render json: @project
+    render json: @project, include: :technologies
   end
 
   # POST /projects
@@ -18,6 +20,12 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
 
     if @project.save
+      if params.key?(:technologies)
+        @project.technologies.clear
+        params[:technologies].each do |i|
+          @project.technologies << Technology.find(i)
+        end
+      end
       render json: @project, status: :created, location: @project
     else
       render json: @project.errors, status: :unprocessable_entity
@@ -27,11 +35,9 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   def update
     if @project.update(project_params)
-      if params.has_key?(:technologies)
-        puts 'wtf', params[:technologies]
+      if params.key?(:technologies)
         @project.technologies.clear
         params[:technologies].each do |i|
-          puts 'llll', i
           @project.technologies << Technology.find(i)
         end
       end
@@ -41,7 +47,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-
   # DELETE /projects/1
   def destroy
     @project.destroy
@@ -49,13 +54,14 @@ class ProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_project
-      @project = Project.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def project_params
-      params.require(:project).permit(:name, :subtitle, :img_url, :site_url, :github_url, :technologies=>[])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_project
+    @project = Project.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def project_params
+    params.require(:project).permit(:name, :subtitle, :img_url, :site_url, :github_url, technologies: [])
+  end
 end
