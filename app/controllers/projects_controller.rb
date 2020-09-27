@@ -6,8 +6,9 @@ class ProjectsController < ApplicationController
   # GET /projects
   def index
     @projects = Project.all
-
-    render json: @projects, include: :technologies
+    sorted = @projects.sort_by {|k| k['build_date']}
+    # puts 'sorted', sorted
+    render json: sorted.reverse, include: :technologies
   end
 
   # GET /projects/1
@@ -62,6 +63,6 @@ class ProjectsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def project_params
-    params.require(:project).permit(:name, :subtitle, :img_url, :site_url, :github_url, technologies: [])
+    params.require(:project).permit(:name, :subtitle, :img_url, :site_url, :github_url, :build_date, technologies: [])
   end
 end
