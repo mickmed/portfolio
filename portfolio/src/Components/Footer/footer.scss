@@ -1,0 +1,19 @@
+.footer {
+    min-height: 15vh;
+    background-image: linear-gradient(#7aafc9, #c6d9e2, rgb(228, 241, 231));
+    width: 100%;
+    // transform:translateX(-20%);
+    z-index: 5;
+    color: white;
+    font-family: arial;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    // display:none;
+    .footer-link {
+        text-decoration: none;
+        color: rgb(189, 75, 75);
+    }
+}

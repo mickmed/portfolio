@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Overpass:100,300,400|Roboto:100,300,600");
+
+.text {
+  margin: 0 10%;
+  padding: 3% 0;
+  color: black;
+  font-family: "Overpass";
+  height:50%;
+  width: 75%;
+  line-height: 1.8em;
+}
+.about-image-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% 20% 5% 0;
+  .about-image {
+    width: 60%;
+  }
+}
+// .para-wrap::-webkit-scrollbar {
+//   display: none;
+// }
+
+@media only screen and (min-width: 600px) {
+  .text {
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .text {
+    font-size:1.3vw;
+  }
+}

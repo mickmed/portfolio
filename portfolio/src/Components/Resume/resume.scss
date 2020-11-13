@@ -1,0 +1,66 @@
+.resume {
+    height: 100%;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 90%;
+    scrollbar-width: none;
+    margin-right:5%;
+
+    .res-img-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        // overflow-y: scroll;
+        margin:5% 0 0 5%;
+        height: 80%;
+       
+        .iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .option {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid lightblue;
+            border-radius:5%;
+            min-width: 48%;
+            font-size: 5em;
+            font-family: "Overpass";
+            opacity: 0.7;
+            box-sizing: border-box;
+            margin:1%;
+          
+
+            .fa-google-drive {
+                color: green;
+            }
+            .fa-file-pdf {
+                color: red;
+            }
+            .fa-linkedin {
+                color: blue;
+            }
+            .fab.fa-github {
+                color: rgb(85,26,139);
+            }
+        }
+        .highlight {
+            // font-size: 10em;
+           border:3px solid rgb(123, 194, 218);
+            opacity:1;
+            transform:scale(1.08);
+        }
+        // &:hover {
+        //     opacity: 0.6;
+        //     background: white;
+        // }
+    }
+}
+
+// .resume:hover{
+//     font-size:3px;
+//     background:red;
+// }

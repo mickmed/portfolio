@@ -1,0 +1,50 @@
+.header {
+    // width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 72px;
+    background: -webkit-linear-gradient(360deg, rgba(197, 157, 47, 1), rgba(250, 239, 230, .5));
+    background: -webkit-linear-gradient(360deg, rgba(224, 222, 216, 0.9), rgba(250, 239, 230, .5));
+
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    .name-plate,
+    .occupation {
+        // color: rgb(255, 255, 255);
+        font-family: "Overpass";
+        // font-style: italic;
+        font-weight: 300;
+    }
+
+    .name-plate {
+        text-decoration: none;
+        font-size: 7vw;
+        color: black;
+        text-shadow: .2px .2px white;
+    }
+
+    .cross {
+        font-size: 1em;
+        font-family: arial;
+        transform: translate(1vw, -1vh);
+    }
+
+    .occupation {
+        margin-right: 3%;
+        font-family: Overpass;
+        font-size: 3vw;
+    }
+
+    @media only screen and (min-width: 600px) {
+        background: -webkit-linear-gradient(360deg, rgb(197, 157, 47), rgb(250, 239, 230));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        .name-plate {
+            font-size: 4vw;
+        }
+    }
+}
