@@ -20,15 +20,17 @@ export function Navbar(parentDiv, data, type = "about") {
       "/signup": function () {
         RouterModules.modules.SignUp().then((module) => module.SignUp())
       },
-      'projects': function () {
+      projects: function () {
         // console.log("project route")
         RouterModules.modules.Projects().then((module) => module.Projects())
       },
-      'projects/edit/:id': function (params) {
+      "projects/edit/:id": function (params) {
         // console.log("project route")
-        RouterModules.modules.MakeForm().then((module) => module.MakeForm(params.id))
+        RouterModules.modules
+          .MakeForm()
+          .then((module) => module.MakeForm(params.id))
       },
-      
+
       about: function () {
         // console.log("about route")
         RouterModules.modules.About().then((module) => module.About())
@@ -52,6 +54,10 @@ export function Navbar(parentDiv, data, type = "about") {
     })
     .resolve()
   // document.body.appendChild(Container())
+  const url = window.location.pathname
+  const route = url.substr(1, url.length - 1)
+
+  // console.log('router', window.location.substr(window.location.lastIndexOf('/') + 1))
 
   //**** NAVBAR ****//
 
@@ -68,28 +74,23 @@ export function Navbar(parentDiv, data, type = "about") {
       a.innerText = Object.keys(array[i])
       // a.setAttribute("href", '#')
 
-      if(a.innerText === 'about'){
-        console.log('about')
-        a.style.background = 'green'
+      if (a.innerText === "about") {
+        console.log("about")
+        a.style.color = "#ffb566"
       }
-      a.innerText === 'about' && a.style.color === 'yellow'
 
       div.appendChild(a)
-      
 
       a.addEventListener("click", (e) => {
         e.preventDefault()
 
         for (let i = 0; i < nav.children.length; i++) {
- 
-
           nav.children[i].firstChild.style.color = "white"
           nav.children[i].firstChild.style.fontWeight = "400"
           nav.children[i].firstChild.style.cursor = "pointer"
-
         }
         e.target.style.color = "#ffb566"
-        e.target.style.textShadow = '1px 1px black'
+        e.target.style.textShadow = "1px 1px black"
         e.target.style.fontWeight = "600"
 
         router.navigate(Object.keys(array[i])[0])
