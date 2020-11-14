@@ -3,9 +3,9 @@
 	position: relative;
 	top: 5;
 	// margin-left: 6%;
-	width: 89%;
+	width: 91vh;
 	// height: 2000px;
-	scrollbar-width: none;
+	// scrollbar-width: none;
 
 
 	.burger {
@@ -45,9 +45,9 @@
 		width:100%;
 		margin: 0 auto;
 	}
-	::-webkit-scrollbar {
-		display: none;
-	}
+	// ::-webkit-scrollbar {
+	// 	display: none;
+	// }
 	.see-more-btn{
 		position: absolute;
 		background:transparent;
@@ -55,7 +55,7 @@
 		font-size:220%;
 		right:0;
 		color:lightblue;
-		top:77%;
+		top:82%;
 		// transform:translate(5%);
 
 	}

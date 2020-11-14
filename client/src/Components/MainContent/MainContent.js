@@ -18,27 +18,48 @@ export const MainContent = () => {
 
   let className = "see-more-btn"
 
-  const gohere = (e) => {
-    const el = qs(".main-content").children[2]
+  const el = mainContent.children[2]
+  const parent = mainContent
+  console.log(mainContent.children)
 
-    if (el.scrollTop <= 10) {
+  el.onscroll = () => {
+    // console.log('scrollTop', el.scrollTop)
+    // console.log('scrollBottom', el.scrollBottom)
+    // console.log('parentscrolltop', el.scrollTop/parent.clientHeight * 100)
+  }
+
+  const gohere = (e) => {
+    const parent = qs(".main-content")
+
+    const el = parent.children[2]
+
+    if (el.scrollTop > 1) {
+      className = "see-more-btn-flip"
+      e.target.parentElement.classList.toggle("see-more-btn-flip")
+      let i = el.scrollTop
+      let int = setInterval(() => {
+        el.scrollTo(0, i)
+
+        i -= 1
+        if (i === 0) {
+          // console.log('more2')
+          clearInterval(int)
+        }
+      }, 2)
+    } else {
+      console.log("less")
       className = "see-more-btn"
       e.target.parentElement.classList.toggle("see-more-btn-flip")
       let i = 10
       let int = setInterval(() => {
         el.scrollTo(0, i)
-        i += 20
-        if (i >= 1300) clearInterval(int)
-      }, 20)
-    } else {
-      className = "see-more-btn-flip"
-      e.target.parentElement.classList.toggle("see-more-btn-flip")
-      let i = 1300
-      let int = setInterval(() => {
-        el.scrollTo(0, i)
-        i -= 30
-        if (i < 0) clearInterval(int)
-      }, 20)
+
+        i += 1
+        if (el.scrollHeight - el.scrollTop === el.clientHeight) {
+          clearInterval(int)
+          console.log("less2")
+        }
+      }, 2)
     }
   }
 
