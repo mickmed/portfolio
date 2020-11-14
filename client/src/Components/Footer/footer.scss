@@ -1,6 +1,6 @@
 .footer {
     min-height: 10vh;
-    background-image: linear-gradient(#7aafc9, #c6d9e2, rgb(228, 241, 231));
+    background-image: linear-gradient(#ffffff, #dae4e9, rgb(171, 229, 236));
     width: 100%;
     // transform:translateX(-20%);
     z-index: 5;
@@ -16,6 +16,15 @@
     .footer-link {
         text-decoration: none;
         color: rgb(189, 75, 75);
-        font-size: 3vw;
+        font-size: 2vw;
     }
+}
+
+@media only screen and (min-width:900px ){
+.footer{
+    .footer-link{
+        text-decoration:none;
+        font-size:1.5vw;
+    }
+}
 }
