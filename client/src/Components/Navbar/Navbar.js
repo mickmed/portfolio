@@ -68,6 +68,12 @@ export function Navbar(parentDiv, data, type = "about") {
       a.innerText = Object.keys(array[i])
       // a.setAttribute("href", '#')
 
+      if(a.innerText === 'about'){
+        console.log('about')
+        a.style.background = 'green'
+      }
+      a.innerText === 'about' && a.style.color === 'yellow'
+
       div.appendChild(a)
       
 

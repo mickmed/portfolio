@@ -45,12 +45,12 @@ export const MainContent = () => {
           // console.log('more2')
           clearInterval(int)
         }
-      }, 2)
+      }, 1)
     } else {
       console.log("less")
       className = "see-more-btn"
       e.target.parentElement.classList.toggle("see-more-btn-flip")
-      let i = 10
+      let i = 1
       let int = setInterval(() => {
         el.scrollTo(0, i)
 
@@ -59,7 +59,7 @@ export const MainContent = () => {
           clearInterval(int)
           console.log("less2")
         }
-      }, 2)
+      }, 1)
     }
   }
 
