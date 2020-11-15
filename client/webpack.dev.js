@@ -6,6 +6,7 @@ const merge = require("webpack-merge");
 
 module.exports = merge(common, {
   mode: "development",
+  watch: true,
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
@@ -23,18 +24,7 @@ module.exports = merge(common, {
           "sass-loader",
         ],
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "/src/img",
-            },
-          },
-        ],
-      },
+     
     ],
   },
 

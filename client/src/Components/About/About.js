@@ -8,7 +8,7 @@ export async function About() {
     "With some self-taught experience, I graduated from the codeBridge program at <span class='perscholas'>Per Scholas</span> in 2018, and in turn General Assembly's Web Development Immersive program in 2019. For the past year I have worked as a Teaching Assistant and an Instructional Associate at General Assembly."
   let text2 =
     "You can see some projects <span class='projects-link'>here</span>. I mostly build full-stack Javascript apps with React, Node, Sequelize, Express, and Postgres. I also enjoy Vanilla Javascript. Other front-end tools are CSS, JQuery, Bootstrap, and Mapbox. This site was built with Vanilla Javascript and comprizes of a Rails backend."
-  console.log("ABOUT")
+  // console.log("ABOUT")
   let mainContentScrollable = qs(".main-content-scrollable")
   console.log(mainContentScrollable.childNodes)
   while (mainContentScrollable.childNodes.length) {

@@ -9,7 +9,7 @@ module.exports = {
     // open: true
     historyApiFallback: true,
   },
-
+  watch: true,
   entry: "./src/index.js",
 
   plugins: [
@@ -30,6 +30,18 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/src/img",
+            },
+          },
+        ],
       },
      
     ],

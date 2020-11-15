@@ -11,8 +11,8 @@ import "./resume.scss"
 // import { technologies } from "./technologies";
 // import { navbar } from "./nav";
 
-export function Resume() {
-  console.log("RESUME")
+export async function Resume () {
+  // console.log("RESUME")
 
   // window.matchMedia("(min-width: 600px)").matches &&
   // document.querySelector('.sidebar').style.display === "none"

@@ -58,7 +58,7 @@ export const login = async (body) => {
 
 export const verify = async () => {
   const token = localStorage.getItem("authToken")
-  console.log(token)
+  // console.log(token)
   if (token) {
     const res = await fetch(baseUrl + "/auth/verify", {
       method: "get",
