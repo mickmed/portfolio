@@ -11,7 +11,7 @@ export function Navbar(parentDiv, data, type = "about") {
     { projects: "fa-project-diagram" },
     { resume: "fa-address-card" },
   ]
-
+console.log('navbar')
   //**** ROUTER ****//
   // let Navigo = require("navigo")
   // let root = null
@@ -59,7 +59,12 @@ export function Navbar(parentDiv, data, type = "about") {
   const url = window.location.pathname
   const route = url.substr(1, url.length - 1)
 
-  console.log("route", route)
+ 
+  let modName = route.charAt(0).toUpperCase() + route.slice(1)
+
+  console.log(route)
+  RouterModules.modules[modName]().then((module) => module[modName]())
+
 
   //**** NAVBAR ****//
 
@@ -76,6 +81,12 @@ export function Navbar(parentDiv, data, type = "about") {
       let a = cecl("a", "link")
 
       a.innerText = Object.keys(array[i])
+
+      if(route === ''){
+        console.log('route')
+        RouterModules.modules['About']().then((module) => module['About']())
+
+      }
 
       if (Object.keys(array[i])[0] === route) {
         console.log(Object.keys(array[i], route))
