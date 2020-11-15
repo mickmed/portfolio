@@ -2,14 +2,16 @@ import { cecl, makeElement, qs } from "../Helpers/domHelper"
 import RouterModules from "../../Router/RouterModules.js"
 
 import "./navbar.scss"
-import { About } from "../About/About"
-import { Projects } from "../Projects/Projects"
+// import { About } from "../About/About"
+// import { Projects } from "../Projects/Projects"
+// import { }
 
 export function Navbar(parentDiv, data, type = "about") {
   const array = [
     { about: "fa-address-card" },
     { projects: "fa-project-diagram" },
     { resume: "fa-address-card" },
+    { resumepdf: "fa-address-card" }
   ]
 console.log('navbar')
   //**** ROUTER ****//
@@ -61,9 +63,14 @@ console.log('navbar')
 
  
   let modName = route.charAt(0).toUpperCase() + route.slice(1)
+  console.log(modName)
+  console.log(RouterModules.modules)
 
-  console.log(route)
-  RouterModules.modules[modName]().then((module) => module[modName]())
+  if(route !== ''){
+    console.log(RouterModules)
+    RouterModules.modules[modName]().then((module) => module[modName]())
+
+  }
 
 
   //**** NAVBAR ****//
@@ -122,7 +129,7 @@ console.log('navbar')
 
         let name = Object.keys(array[i])[0]
         let modName = name.charAt(0).toUpperCase() + name.slice(1)
-        console.log(window.location.pathname, modName)
+        console.log(window.location.pathname, modName, RouterModules.modules)
 
         RouterModules.modules[modName]().then((module) => module[modName]())
       })

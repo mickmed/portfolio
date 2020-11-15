@@ -16,13 +16,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
-    
   ],
 
   module: {
     rules: [
- 
-
       {
         test: /\.html$/,
         use: ["html-loader"],
@@ -32,7 +29,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(pdf|png|jpg|gif|svg)$/,
         use: [
           {
             loader: "url-loader",
@@ -43,7 +40,7 @@ module.exports = {
           },
         ],
       },
-     
+    
     ],
   },
 }

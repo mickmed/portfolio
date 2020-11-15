@@ -31,3 +31,16 @@
     font-size:1.3vw;
   }
 }
+
+.text, .about-image-wrapper{
+  animation:fadein 2s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

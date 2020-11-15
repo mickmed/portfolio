@@ -95,3 +95,17 @@
 }
 
 //filler
+
+
+.project-wrap{
+  animation:fadein 2s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

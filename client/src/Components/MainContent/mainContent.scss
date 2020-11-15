@@ -2,6 +2,7 @@
 	position: relative;
 	width: 91vw;
 	// display: none;
+	animation: fadein 2s forwards;
 	// top: 5;
 	// margin-left: 6%;
 	// height: 2000px;
@@ -75,4 +76,15 @@
 			}
 		}
 	}
+}
+
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
