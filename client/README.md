@@ -14,10 +14,10 @@ It is built with vanilla Javascript and a [Rails backend](https://github.com/mic
 ### &#127803; Technologies	
 - Javascript
 - Webpack
-- Navigo Router
 - Sass
 - Font-Awesome
   <br>
+  
 - Ruby on Rails
 - Postgresql
 - BCrypt
