@@ -2,7 +2,7 @@
 
 .project-wrap {
   position: relative;
-  margin:3% 10% 3% 5%;
+  margin:3% 10% 3% 10%;
   flex-direction: row;
   .link-modal {
     position: relative;
@@ -31,7 +31,7 @@
 @media only screen and (min-width: 600px) {
   .project-wrap{
     // margin:0 10%;
-    margin:3% 10% 3% 5%;
+    margin:0 10% 3% 10%;
 
     .link-modal{
       // width:60%;

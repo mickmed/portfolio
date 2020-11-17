@@ -11,13 +11,14 @@ import "./signup.scss"
 
 
 
-export const SignUp = async () => {
+export const Signup = async () => {
+  console.log('here')
 
   // const body = {
   //   user: { username: "ted", email: "ted@ted.com", password: "123456" },
   // }
   console.log("EDIT PROJECTS")
-  let mainContent = qs(".main-content")
+  let mainContent = qs(".main-content-scrollable")
   while (mainContent.childNodes.length > 1) {
     mainContent.removeChild(mainContent.lastChild)
   }
@@ -26,7 +27,7 @@ export const SignUp = async () => {
   // const body = {username:'', email:'', password:''}
   let body = { user: {} }
 
-  let signUpDiv = cecl("div", "signUp")
+  let signUpDiv = cecl("div", "sign-up")
   let form = cecl("form", "login-form")
 
   inputs.map((el) => {
@@ -52,6 +53,7 @@ export const SignUp = async () => {
   })
 
   let loginButton = cecl("button", "login")
+  loginButton.classList.add('login-btn')
 
   
   let currentUser = await verify()

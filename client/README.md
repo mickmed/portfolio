@@ -38,6 +38,11 @@ It is built with vanilla Javascript and a [Rails backend](https://github.com/mic
   
  ![](./src/img/flow-chart.png)
 
+### &#127803; ERD
+
+![](./src/img/portfolio-erd.png)
+
+
 <br>
 
 

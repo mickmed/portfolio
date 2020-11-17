@@ -6,7 +6,7 @@ const _modules = {
   Resumepdf: ()=>import('../Components/Resume/ResumePdf.js'),
 
   Resume: () => import('../Components/Resume/Resume.js'),
-  SignUp:()=>import ('../Components/Login/SignUp.js'),
+  Signup:()=>import ('../Components/Login/SignUp.js'),
 };
  
 export default class Router {

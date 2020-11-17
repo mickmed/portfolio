@@ -11,9 +11,9 @@ export function Navbar(parentDiv, data, type = "about") {
     { about: "fa-address-card" },
     { projects: "fa-project-diagram" },
     { resume: "fa-address-card" },
-    { resumepdf: "fa-address-card" }
+    { resumepdf: "fa-address-card" },
   ]
-console.log('navbar')
+  console.log("navbar")
   //**** ROUTER ****//
   // let Navigo = require("navigo")
   // let root = null
@@ -58,26 +58,27 @@ console.log('navbar')
   //   })
   //   .resolve()
   // document.body.appendChild(Container())
-  const url = window.location.pathname
-  const route = url.substr(1, url.length - 1)
-
- 
-  let modName = route.charAt(0).toUpperCase() + route.slice(1)
-  console.log(modName)
-  console.log(RouterModules.modules)
-
-  if(route !== ''){
-    console.log(RouterModules)
-    RouterModules.modules[modName]().then((module) => module[modName]())
-
-  }
-
 
   //**** NAVBAR ****//
 
-
-
   let render = () => {
+    const url = window.location.pathname
+    const route = url.substr(1, url.length - 1) //url end
+    let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize
+   
+    if (route !== "") {
+      console.log(RouterModules)
+      RouterModules.modules[modName]().then((module) => module[modName]())
+    }
+
+    window.onpopstate = () => {
+   
+      const url = window.location.pathname
+      const route = url.substr(1, url.length - 1) //url end
+      let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize
+      console.log(modName)
+      RouterModules.modules[modName]().then((module) => module[modName]())
+    }
     let nav = cecl("div", "navbar")
 
     array.forEach((opt, i) => {
@@ -88,18 +89,16 @@ console.log('navbar')
       let a = cecl("a", "link")
 
       a.innerText = Object.keys(array[i])
-
-      if(route === ''){
-        console.log('route')
-        RouterModules.modules['About']().then((module) => module['About']())
-
+      if (route === "" && a.innerText === "about") {
+        a.style.color = "#ffb566"
+      }
+      if (route === "") {
+        console.log("route")
+        RouterModules.modules["About"]().then((module) => module["About"]())
       }
 
       if (Object.keys(array[i])[0] === route) {
         console.log(Object.keys(array[i], route))
-        a.style.color = "#ffb566"
-      }
-      if (route === "" && a.innerText === "about") {
         a.style.color = "#ffb566"
       }
 
@@ -128,7 +127,7 @@ console.log('navbar')
         )
 
         let name = Object.keys(array[i])[0]
-        let modName = name.charAt(0).toUpperCase() + name.slice(1)
+        let modName = name.charAt(0).toUpperCase() + name.slice(1) //capitalize first letter in route
         console.log(window.location.pathname, modName, RouterModules.modules)
 
         RouterModules.modules[modName]().then((module) => module[modName]())
