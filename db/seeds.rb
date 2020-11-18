@@ -46,7 +46,7 @@ projects = Project.create!([
         site_url: 'http://micks-mental-math.surge.sh',  
         github_url:'https://github.com/mickmed/mental-math-master', 
         img_url:'math-game1.png',
-        technologies:[Technology.find(1), Technology.find(2)],
+        technologies:[Technology.first, Technology.last],
         description:'<p> Test your mental arithmetic abilities in this fun math game. You\'ll be up against a timer, so pressure\'s on!!!</p>' '<p>This was my first project as a student at General Assembly\'s Web Development Immersive Cohort in 2018.</p>'
     },
 
