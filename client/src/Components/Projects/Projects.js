@@ -61,25 +61,25 @@ export async function Projects() {
     let description = cecl('div', 'description')
     description.innerHTML = project.description
 
-    if(containerWidth < 900) {
+    if (containerWidth < 900) {
       linkModal.appendChild(techIcons)
 
       linkModal.appendChild(description)
 
-    }else{
+    } else {
 
-    linkModal.appendChild(description)
-       linkModal.appendChild(techIcons)
+      linkModal.appendChild(description)
+      linkModal.appendChild(techIcons)
 
     }
-   
+
 
 
     let linkModalIcons = linkModal.appendChild(cecl('div', 'link-modal-icons'))
 
 
-    linkModalIcons.innerHTML = 
-    `<div><a href=${project.site_url} target='_blank'><i class="fas fa-home fa-fw"></i></a>
+    linkModalIcons.innerHTML =
+      `<div><a href=${project.site_url} target='_blank'><i class="fas fa-home fa-fw"></i></a>
     <p class='home-tool-tip'>website</p></div>
 
     <div><a href=${project.github_url} target='_blank'><i class="fab fa-github"></i></a>
@@ -128,8 +128,9 @@ export async function Projects() {
         if (containerWidth < 900) {
           imgWrapper[index].style.flexDirection = 'column'
           linkModal.style.width = '90%'
-          techIcons.style.width = '90%'
-console.log('inside', containerWidth)
+          techIcons.style.width = '80%'
+          linkModal.style.marginTop = '5%'
+          linkModal.style.background = 'rgb(240, 253, 253)'
         } else {
 
           imgWrapper[index].style.width = '90%'
@@ -139,7 +140,7 @@ console.log('inside', containerWidth)
 
           innerImgWrap[index].style.width = '99%'
           innerImgWrap[index].style.height = '99%'
-// 
+          // 
         }
 
 

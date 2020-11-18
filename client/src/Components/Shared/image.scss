@@ -232,6 +232,11 @@
 }
 
 @media only screen and (min-width: 900px) {
+  .project-img{
+    .tech-icons{
+      // width:10%;
+    }
+  }
   .project-title {
     font-size: 4.5vw;
     color: green;
