@@ -10,12 +10,14 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    padding:10%;
+    box-sizing: border-box;
 
     // display:none;
     .footer-link {
         text-decoration: none;
-        color: rgb(189, 75, 75);
-        font-size: 2vw;
+        color: rgb(189, 75, 75) !important;
+        font-size: 3vw;
     }
 }
 
