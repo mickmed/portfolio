@@ -34,7 +34,13 @@
             box-sizing: border-box;
             margin:1%;
           
-
+            a{
+                height:75%;
+            }
+            a img{
+                height:75%;
+                transform:translateX(-30%);
+            }
             .fa-google-drive {
                 color: green;
             }
