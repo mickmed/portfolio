@@ -22,6 +22,7 @@ export const EditProject = async (projectWrap, project, addProject) => {
   }
   let newProject = {}
   let handleChange = (e) => {
+    console.log(e.target.name)
     newProject[e.target.name] = e.target.value
   }
   let form = Form("edit-project-form")
