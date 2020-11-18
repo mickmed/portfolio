@@ -36,7 +36,7 @@ projects = Project.create!([
         site_url: 'https://psychedelic-plantation.surge.sh', 
         github_url:'https://github.com/mickmed/mental-math-master', 
         img_url:'nyc-trees1.png',
-        technologies:[Technology.find(1), Technology.find(2)],
+        technologies:[Technology.first, Technology.last],
         description: '<p> Discover the tress of the New York City streets. Users can search by address, neighborhood, or zipcode. Find out the species, health, size, and other aspects about the tree.<p>' '<p>This was my second project as a student at General Assembly\'s Web Development Immersive Cohort in 2018.</p>'
         
     },
