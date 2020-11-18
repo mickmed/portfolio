@@ -15,12 +15,17 @@ technologies = Technology.create!([
     {name: 'Javascript', icon_url:'javascript.svg'},
     {name: 'React', icon_url:'reactjs.png'},
     {name: 'CSS', icon_url:'css3.png'},
-    {name: 'SASS'},
+    {name: 'SASS', icon_url:'sass3.png'},
     {name: 'HTML', icon_url:'html5.png'},
     {name: 'Mapbox',icon_url:'mapbox.png'},
-    {name: 'AmCharts'},
+    {name: 'AmCharts', icon_url:'amcharts.png'},
     {name: 'Ruby on Rails', icon_url:'rubyonrails.png'},
-    {name: 'PostgreSQL', icon_url:'postgresql.png'}
+    {name: 'PostgreSQL', icon_url:'postgresql.png'},
+    {name: 'Webpack', icon_url:'webpack.png'},
+
+   
+
+    
 
 ])
 
@@ -31,6 +36,8 @@ projects = Project.create!([
         site_url: 'https://psychedelic-plantation.surge.sh', 
         github_url:'https://github.com/mickmed/mental-math-master', 
         img_url:'nyc-trees1.png',
+        technologies:[Technology.find(1), Technology.find(2)],
+        description: '<p> Discover the tress of the New York City streets. Users can search by address, neighborhood, or zipcode. Find out the species, health, size, and other aspects about the tree.<p>' '<p>This was my second project as a student at General Assembly\'s Web Development Immersive Cohort in 2018.</p>'
         
     },
     {
@@ -38,7 +45,9 @@ projects = Project.create!([
         subtitle: 'Test your mental arithmetic against the timer', 
         site_url: 'http://micks-mental-math.surge.sh',  
         github_url:'https://github.com/mickmed/mental-math-master', 
-        img_url:'math-game1.png' 
+        img_url:'math-game1.png',
+        technologies:[Technology.find(1), Technology.find(2)],
+        description:'<p> Test your mental arithmetic abilities in this fun math game. You\'ll be up against a timer, so pressure\'s on!!!</p>' '<p>This was my first project as a student at General Assembly\'s Web Development Immersive Cohort in 2018.</p>'
     },
 
 ])

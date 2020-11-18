@@ -43,14 +43,14 @@ export const signUp = async (body) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   })
-  .then((json) => {
-    return json.json()
-  })
-  .then((data) => {
-    localStorage.setItem("authToken", data.token)
+    .then((json) => {
+      return json.json()
+    })
+    .then((data) => {
+      localStorage.setItem("authToken", data.token)
 
-    return data
-  })
+      return data
+    })
   return res
 }
 

@@ -34,13 +34,13 @@ export const Image = (src, title, modal, site_url) => {
     //     imgWrapper.style.width = '70%'
     //   }
     //   })
-    
+
     //   // imgWrapper.style.width = '40%'
     //   // h2.style.
     // }
-    
 
-  
+
+
 
     // linkModalMore.addEventListener("click", async evt => {
     //   let res = await showSingleItemm(evt, e, "projects");

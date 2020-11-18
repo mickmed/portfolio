@@ -11,7 +11,7 @@ import "./resume.scss"
 // import { technologies } from "./technologies";
 // import { navbar } from "./nav";
 
-export async function Resume () {
+export async function Resume() {
   // console.log("RESUME")
 
   // window.matchMedia("(min-width: 600px)").matches &&
@@ -38,9 +38,9 @@ export async function Resume () {
       url: "https://github.com/mickmed",
     },
     // { type: "pdf", icon: '<i class="far fa-file-pdf"></i>', url: "https://www.docdroid.net/zQfqmfj/mick-roth-resume-pdf" },
-    { type: "ga", icon: `<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png"/>` , url: "https://generalassemb.ly/instructors/mick-roth/23105" },
+    { type: "ga", icon: `<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png"/>`, url: "https://generalassemb.ly/instructors/mick-roth/23105" },
     { type: "resumePdf", icon: '<i class="far fa-file-pdf"></i>', url: "/resumepdf" },
-    { type: 'mewe', icon: '<img src="https://russiandatingreviews.com/uploads/logo/1591820457a3ih8m.jpg"/>', url:"https://mewe.com/i/mickroth1"}
+    { type: 'mewe', icon: '<img src="https://russiandatingreviews.com/uploads/logo/1591820457a3ih8m.jpg"/>', url: "https://mewe.com/i/mickroth1" }
 
   ]
 
@@ -60,7 +60,7 @@ export async function Resume () {
     let option = resImgWrapper.appendChild(cecl("div", "option"))
     option.setAttribute("value", opt.type)
 
-  
+
 
     option.innerHTML = `<a href = ${opt.url} target='_blank'>${opt.icon}</a>`
 
@@ -75,7 +75,7 @@ export async function Resume () {
 
     option.classList.remove("highlight")
   })
-  mainContentScrollable.appendChild(Footer()) 
+  mainContentScrollable.appendChild(Footer())
 
   //   if (type === ".PDF") {
   // console.log(navigator.userAgent)

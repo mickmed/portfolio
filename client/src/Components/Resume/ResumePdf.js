@@ -20,8 +20,8 @@ export async function Resumepdf() {
   const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type="application/pdf">
 
 </object>`
- const img = cecl('img', 'img')
- img.src = 'src/img/mam_logo.png'
+  const img = cecl('img', 'img')
+  img.src = 'src/img/mam_logo.png'
 
 
   mainContentScrollable.innerHTML = resumePdf

@@ -27,7 +27,7 @@ export const Form = (className) => {
 }
 
 export const Input = (inputAtts) => {
-  const {className, name, type, value, placeholder, handleChange} = inputAtts
+  const { className, name, type, value, placeholder, handleChange } = inputAtts
   let input = createElement(`input`)
   input.className = className
   input.name = name
@@ -36,7 +36,7 @@ export const Input = (inputAtts) => {
   input.placeholder = placeholder
 
   input.addEventListener(`keyup`, (e) => {
-  
+
     handleChange(e)
   })
 
@@ -51,8 +51,8 @@ export const Button = (className, type, innerText) => {
 }
 
 export const Checkbox = (inputAtts) => {
-  let {className, name, id, value, checked} = inputAtts
-console.log(checked)
+  let { className, name, id, value, checked } = inputAtts
+  console.log(checked)
   let chkBox = createElement("input")
   className = className
   chkBox.name = name
@@ -62,7 +62,7 @@ console.log(checked)
 
   checked === "checked" && chkBox.setAttribute("checked", "")
 
-  
+
 
   return chkBox
 }

@@ -65,14 +65,14 @@ export function Navbar(parentDiv, data, type = "about") {
     const url = window.location.pathname
     const route = url.substr(1, url.length - 1) //url end
     let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize
-   
+
     if (route !== "") {
       console.log(RouterModules)
       RouterModules.modules[modName]().then((module) => module[modName]())
     }
 
     window.onpopstate = () => {
-   
+
       const url = window.location.pathname
       const route = url.substr(1, url.length - 1) //url end
       let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize

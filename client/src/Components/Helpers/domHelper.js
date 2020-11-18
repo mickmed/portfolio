@@ -7,7 +7,7 @@ export const cecl = (type, str) => {
   return el
 }
 export const createElement = (str) => {
-    return document.createElement(str)
+  return document.createElement(str)
 }
 
 export const ca = (el, str) => {
@@ -68,9 +68,9 @@ export const BurgerClick = (switchBurger) => {
       if (count === 0) {
         clearTimeout(slider)
         switchBurger.showSidebar = false
-       
+
       } else {
-       
+
         mainContent.style.width = `${-1000 / count}%`
       }
     }, 40)
@@ -79,10 +79,10 @@ export const BurgerClick = (switchBurger) => {
     let slider = setInterval(() => {
       count -= 10
       sidebar.style.transform = `translate(${count}%, 0)`
-      
+
       mainContent.style.width = `${-count}%`
       if (count === -100) {
-        
+
         sidebar.style.display = "none"
         clearTimeout(slider)
         switchBurger.showSidebar = true

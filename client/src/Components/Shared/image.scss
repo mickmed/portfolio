@@ -1,16 +1,54 @@
 .project-img {
   position: relative;
-  width: 100%;
+  // width: 100%;
 
   margin: 0 0 10%;
+
+  .tech-icons {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5%;
+    transform: translateY(-50%);
+    // margin: 0 auto;
+    .tech-icon {
+      width: 10%;
+    }
+  }
+  .link-modal-icons {
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      a {
+        font-size: 200%;
+      }
+      p {
+        // display:none;
+        font-size: 50%;
+        margin: 0;
+        transform: translateX(0%);
+      }
+    }
+
+    // a:hover + .home-tool-tip{
+    //   display:block;
+    //   transform:translateX(50px);
+    // }
+  }
   .img-wrapper {
     position: relative;
     padding: 6%;
-    width: 100%;
+    // width: 100%;
 
     // transform:translateX(-25%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     &:before {
       content: "";
@@ -83,6 +121,7 @@
         opacity: 0;
         z-index: 2;
         overflow: hidden;
+
         /* background-image:linear-gradient(
             to right, 
             rgba(0, 0, 0, 0.99),
@@ -120,9 +159,9 @@
             padding: 3% 0;
             margin: 0 0 0 10%;
             font-family: "Overpass";
-            font-family: 'Roboto';
-            font-weight:300;
-                    // font-size: 5vw;
+            font-family: "Roboto";
+            font-weight: 300;
+            // font-size: 5vw;
             // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             /* font-we0ight:lighter; */
             color: white;
@@ -178,41 +217,17 @@
         }
       }
     }
-  }
-}
+    .link-modal {
+      .link-modal-icons {
+        // font-size: 500%;
 
-// .fa-github,
-.fa-home {
-  position: absolute;
-  color: grey;
-  opacity: 1;
-  background: white;
-  border-radius: 5px;
-  border: 2px solid rgb(32, 30, 30);
-  z-index: 20;
-  padding: 1%;
-}
-
-.link-modal-icons {
-  // background-color:rgba(201, 201, 223, 0.4);
-  // position:absolute;
-  // top:5%;
-  // left:2%;
-  // height:90%;
-  // width:40%;
-  // .fa-github {
-  //   top: 5%;
-  //   left: 5%;
-  //   background: white;
-  //   font-size: 300%;
-  // }
-  .fa-home {
-    bottom: 9%;
-    left: 5%;
-    // transform: translate(-10%);
-    background: white;
-    font-size: 200%;
-    height: 25%;
+        a {
+          background: white;
+          font-size: 100%;
+          height: 25%;
+        }
+      }
+    }
   }
 }
 
@@ -222,10 +237,5 @@
     color: green;
   }
   .link-modal-icons {
-    .fa-home {
-      font-size: 400%;
-      height: 15%;
-      border-radius:10px;
-    }
   }
 }

@@ -1,11 +1,11 @@
-import { BaseUrl} from './BaseUrl.js'
+import { BaseUrl } from './BaseUrl.js'
 const baseUrl = BaseUrl()
 
 
 export let getProjects = async () => {
   let results = await fetch(`${baseUrl}/projects`)
     .then((res) => {
-      
+
       return res.json()
     })
     .then((ans) => {
@@ -18,7 +18,7 @@ export let getProjects = async () => {
 export let getProject = async (id) => {
   let result = await fetch(`${baseUrl}/projects/${id}`)
     .then((res) => {
-      
+
       return res.json()
     })
     .then((ans) => {
@@ -49,51 +49,51 @@ export const addProject = async (body) => {
 
 
 export const updateProject = async (body, id) => {
-    console.log(JSON.stringify(body))
-    const res = await fetch(`${baseUrl}/projects/${id}`, {
-      method: `put`,
-      body: JSON.stringify(body),
-      headers: { 'Content-Type': 'application/json' },
+  console.log(JSON.stringify(body))
+  const res = await fetch(`${baseUrl}/projects/${id}`, {
+    method: `put`,
+    body: JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((json) => {
+      return json.json()
     })
-      .then((json) => {
-        return json.json()
-      })
-      .then((data) => {
-        return data
-      })
- 
-  }
+    .then((data) => {
+      return data
+    })
+
+}
 //
-  export const deleteProject = async (id) => {
+export const deleteProject = async (id) => {
 
-  
-   
-    const res = await fetch(`${baseUrl}/projects/${id}`, {
-      method: `delete`,
-      headers: { 'Content-Type': 'application/json' }
+
+
+  const res = await fetch(`${baseUrl}/projects/${id}`, {
+    method: `delete`,
+    headers: { 'Content-Type': 'application/json' }
+  })
+    .then((json) => {
+      return json.json()
     })
-      .then((json) => {
-        return json.json()
-      })
-      .then((data) => {
-        return data
-      })
-    console.log(res)
-  }
+    .then((data) => {
+      return data
+    })
+  console.log(res)
+}
 
 
-export const updateProjectTechnologies = async(project_id, id)=>{
+export const updateProjectTechnologies = async (project_id, id) => {
   console.log('upt')
   const res = await fetch(`${baseUrl}/projects/${project_id}/technologies/${id}`, {
     method: `put`,
     headers: { 'Content-Type': 'application/json' }
   })
-  .then((json) => {
-    return json.json()
-  })
-  .then((data) => {
-    return data
-  })
-console.log(res)
+    .then((json) => {
+      return json.json()
+    })
+    .then((data) => {
+      return data
+    })
+  console.log(res)
 
 }

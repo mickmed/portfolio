@@ -54,8 +54,8 @@ export const EditProject = async (projectWrap, project, addProject) => {
   form.appendChild(checks)
   let technologies = await getTechnologies()
   technologies.map((technology) => {
-    
-  let checked
+
+    let checked
     addProject === undefined &&
       project.technologies.forEach((projectTechnology) => {
         if (technology.name === projectTechnology.name) {
@@ -67,13 +67,13 @@ export const EditProject = async (projectWrap, project, addProject) => {
       className: "edit-project-chkbox",
       name: technology.name,
       id: technology.name,
-      value:  technology.id,
+      value: technology.id,
       checked: addProject === "addProject" ? "" : checked,
 
     })
     checks.appendChild(bx)
     checks.appendChild(Label("tech-box-label", technology.name, "tech-box"))
-    
+
   })
   form.appendChild(
     Button(

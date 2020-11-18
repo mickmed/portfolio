@@ -31,7 +31,20 @@ module.exports = merge(common, {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(pdf|png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/src/img",
+            },
+          },
+        ],
+      },
       
     ],
+    
   },
 })
