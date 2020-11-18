@@ -9,7 +9,7 @@ module.exports = {
     // open: true
     historyApiFallback: true,
   },
-  watch: true,
+  // watch: true,
   entry: "./src/index.js",
 
   plugins: [
