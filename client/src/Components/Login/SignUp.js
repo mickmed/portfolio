@@ -71,7 +71,8 @@ export const Signup = async () => {
 
   loginButton.addEventListener("click", async () => {
     // let currentUser = await getCurrentUser()
-    // console.log(currentUser)
+    console.log(currentUser)
+
     if (!currentUser && Object.keys(body.user).length !== 0) {
       body = { auth: { ...body.user } }
      
