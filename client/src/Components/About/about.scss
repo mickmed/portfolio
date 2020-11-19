@@ -7,7 +7,8 @@
   font-family: "Overpass";
   height:50%;
   width: 75%;
-  // line-height: 1.8em;
+  line-height: 1.8em;
+  padding-bottom:20%;
 }
 .about-image-wrapper {
   display: flex;
@@ -23,6 +24,7 @@
 
 @media only screen and (min-width: 600px) {
   .text {
+    padding-bottom:1%;
   }
 }
 
