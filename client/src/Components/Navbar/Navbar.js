@@ -10,8 +10,8 @@ export function Navbar(parentDiv, data, type = "about") {
   const array = [
     { about: "fa-address-card" },
     { projects: "fa-project-diagram" },
+    { contact: "fa-address-card" },
     { resume: "fa-address-card" },
-    { resumepdf: "fa-address-card" },
   ]
   console.log("navbar")
   //**** ROUTER ****//
@@ -67,7 +67,8 @@ export function Navbar(parentDiv, data, type = "about") {
     let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize
 
     if (route !== "") {
-      console.log(RouterModules)
+      console.log(route, modName)
+      console.log(RouterModules.modules[modName]())
       RouterModules.modules[modName]().then((module) => module[modName]())
     }
 

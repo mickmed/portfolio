@@ -11,7 +11,7 @@ import "./resume.scss"
 // import { technologies } from "./technologies";
 // import { navbar } from "./nav";
 
-export async function Resume() {
+export async function Contact() {
   // console.log("RESUME")
 
   // window.matchMedia("(min-width: 600px)").matches &&

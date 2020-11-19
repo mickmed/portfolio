@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Overpass:100,300,400|Roboto:100,300,600");
 
 .text {
-  margin: 0 10%;
-  padding: 3% 0;
+  margin: 3% 10%;
+  padding: 3% 0 20%;
   color: black;
   font-family: "Overpass";
   // height:50%;
   width: 75%;
   line-height: 1.8em;
-  padding-bottom:20%;
-  margin-bottom:10%
+ 
+  
 }
 .about-image-wrapper {
   display: flex;
-  justify-content: flex-end;
-  margin: 5% 20% 5% 0;
+  justify-content: center;
   .about-image {
     width: 60%;
   }
@@ -26,6 +25,7 @@
 @media only screen and (min-width: 600px) {
   .text {
     padding-bottom:1%;
+    margin-bottom:1%;
   }
 }
 

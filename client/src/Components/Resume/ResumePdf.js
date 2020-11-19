@@ -9,7 +9,7 @@ import PdfFile from '../../../src/img/mickrothresume.pdf'
 
 import "./resume.scss"
 
-export async function Resumepdf() {
+export async function Resume() {
   console.log('pdf')
   let mainContentScrollable = qs(".main-content-scrollable")
   while (mainContentScrollable.childNodes.length) {
