@@ -1,10 +1,10 @@
 .resume {
-    min-height: 80%;
+    min-height: 100%;
     margin: 1%;
     display: flex;
     justify-content: center;
     overflow-y: scroll;
-   
+    height: 90%;
     scrollbar-width: none;
     margin-right:5%;
     animation: fadein 1s forwards;
