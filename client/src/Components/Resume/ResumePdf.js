@@ -17,8 +17,9 @@ export async function Resume() {
   }
 
 
-  const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type="application/pdf">
-  <embed src="${PdfFile} type="application/pdf"
+  const resumePdf = `<object class='resume-pdf' data=https://drive.google.com/drive/u/0/my-drive  type="application/pdf">
+  <embed src=https://drive.google.com/drive/u/0/my-drive type="application/pdf"
+  alt: <a href = https://drive.google.com/drive/u/0/my-drive>
 
 </object>`
   const img = cecl('img', 'img')
