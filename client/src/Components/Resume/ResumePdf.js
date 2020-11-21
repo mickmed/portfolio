@@ -5,7 +5,7 @@ import { BaseUrl } from '../Services/BaseUrl'
 
 import './ResumePdf.scss'
 
-const PdfFile = `${BaseUrl()}/src/img/mickrothresume.pdf`
+const PdfFile = `${window.location.origin}/src/img/mickrothresume.pdf`
 console.log(BaseUrl())
 
 
@@ -32,13 +32,13 @@ res.innerText = 'hi te'
 
 console.log(res)
 
-{/* <iframe class='resume-pdf' src=${PdfFile}></iframe> */}
+const resu = `<iframe class='resume-pdf' src=${PdfFile}></iframe>`
  
-  const img = cecl('img', 'img')
-  img.src = 'src/img/mam_logo.png'
+  // const img = cecl('img', 'img')
+  // img.src = 'src/img/mam_logo.png'
 
 
-  mainContentScrollable.appendChild(res)
+  mainContentScrollable.innerHTML = resu
 
   mainContentScrollable.appendChild(Footer())
 
