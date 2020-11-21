@@ -32,10 +32,22 @@ module.exports = merge(common, {
         ],
       },
       {
-        test: /\.(pdf|png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/src/img",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: "file-loader?minetype=application/pdf&name=[name].pdf",
             options: {
               name: "[name].[ext]",
               outputPath: "/src/img",
