@@ -17,10 +17,12 @@ export async function Resume() {
   }
 
 
-  const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type='application/pdf'>
+  const resumePdf = `
   <embed class='resume-pdf' src='https://docs.google.com/document/d/1F0CtmV9ViPecK5KDHgKS2BZJiSy8QL6LS51BF2IaroI/edit' type='application/pdf'/>
 
-</object>`
+
+
+`
   const img = cecl('img', 'img')
   img.src = 'src/img/mam_logo.png'
 
