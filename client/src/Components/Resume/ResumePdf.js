@@ -20,9 +20,10 @@ export async function Resume() {
 
 // </object>
 
+{/* <iframe class='resume-pdf' src=${PdfFile}></iframe> */}
   const resumePdf = `
+  <a class='resume-pdf' href=${PdfFile}>hi</a>
 
-<iframe class='resume-pdf' src=${PdfFile}></iframe>
 
 `
   const img = cecl('img', 'img')
