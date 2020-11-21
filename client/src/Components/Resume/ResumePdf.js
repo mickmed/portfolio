@@ -18,7 +18,7 @@ export async function Resume() {
 
 
   const resumePdf = `
-  <embed class='resume-pdf' src='https://docs.google.com/document/d/1F0CtmV9ViPecK5KDHgKS2BZJiSy8QL6LS51BF2IaroI/edit' type='application/pdf'/>
+  <embed class='resume-pdf' src=${PdfFile} type='application/pdf'/>
 
 
 
