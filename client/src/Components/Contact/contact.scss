@@ -6,7 +6,7 @@
     overflow-y: scroll;
     height: 90%;
     scrollbar-width: none;
-    margin-right:5%;
+   
     animation: fadein 1s forwards;
 
     .res-img-wrapper {
@@ -14,7 +14,9 @@
         justify-content: center;
         flex-wrap: wrap;
         // overflow-y: scroll;
-        margin:5% 0 0 5%;
+        // margin:5% 0 0 5%;
+        padding:3%;
+        box-sizing:border-box;
         height: 80%;
        
         .iframe {
