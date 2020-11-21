@@ -18,7 +18,7 @@ export async function Resume() {
 
 
   const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type="application/pdf">
-  <embed src="resume-pdf" type="application/pdf"
+  <embed src="${PdfFile} type="application/pdf"
 
 </object>`
   const img = cecl('img', 'img')
