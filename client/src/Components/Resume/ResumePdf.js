@@ -1,10 +1,12 @@
 import "../Shared/Image"
 import { qs, cecl } from "../Helpers/domHelper"
 import { Footer } from "../Footer/Footer.js"
+import { BaseUrl } from '../Services/BaseUrl'
 
 import './ResumePdf.scss'
 
-import PdfFile from '../../../src/img/mickrothresume.pdf'
+const PdfFile = `${BaseUrl()}/src/img/mickrothresume.pdf`
+console.log(BaseUrl())
 
 
 import "./resume.scss"
@@ -22,7 +24,7 @@ export async function Resume() {
 
 {/* <iframe class='resume-pdf' src=${PdfFile}></iframe> */}
   const resumePdf = `
-  <a class='resume-pdf' href=${PdfFile}>hi</a>
+  <a class='resume-pdf' href='/src/img/mickrothresume.pdf'>hi</a>
 
 
 `
