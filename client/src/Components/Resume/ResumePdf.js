@@ -17,7 +17,7 @@ export async function Resume() {
   }
 
 
-  const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type="application/pdf">
+  const resumePdf = `<object class='resume-pdf' data=${PdfFile}  type="pdf">
   <embed src=${PdfFile} type="application/pdf"
   alt: <a href = ${PdfFile}>link</a>/>
 
