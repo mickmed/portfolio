@@ -21,18 +21,24 @@ export async function Resume() {
 //   <embed class='resume-pdf' src='https://docs.google.com/document/d/1F0CtmV9ViPecK5KDHgKS2BZJiSy8QL6LS51BF2IaroI/edit' type='application/pdf'/>
 
 // </object>
+const location = window.location.origin
+
+console.log(window.location)
+
+const res = cecl('a', 'resume-pdf')
+res.href = location + '/src/img/mickrothresume.pdf'
+res.innerText = 'hi te'
+
+
+console.log(res)
 
 {/* <iframe class='resume-pdf' src=${PdfFile}></iframe> */}
-  const resumePdf = `
-  <a class='resume-pdf' href='/src/img/mickrothresume.pdf'>hi</a>
-
-
-`
+ 
   const img = cecl('img', 'img')
   img.src = 'src/img/mam_logo.png'
 
 
-  mainContentScrollable.innerHTML = resumePdf
+  mainContentScrollable.appendChild(res)
 
   mainContentScrollable.appendChild(Footer())
 
