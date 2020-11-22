@@ -1,0 +1,21 @@
+@font-face {
+    src: local("Southland"), url(./fonts/Southland.ttf);
+    font-family: "Southland";
+}
+
+/* @font-face{
+    src: local('Vegan'), url(./fonts/vegan.ttf);
+    font-family:'Vegan';
+  } */
+
+@font-face {
+    src: local("Simple"), url(./fonts/simplescript.ttf);
+    font-family: "Simple";
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 96vw;
+    height: 100vh;
+    font-family: "Simple";
+}

@@ -21,6 +21,20 @@ export const Image = (src, title, modal, site_url) => {
     let h2 = modal.childNodes[0].appendChild(cecl("h2", "project-title"))
     modal.childNodes[0].childNodes[0].innerText = title
 
+    console.log(title)
+    if (title === 'NYC Trees') {
+      modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
+      modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
+
+    } else if (title === 'Mick\'s Math Mental') {
+      modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
+
+      modal.childNodes[0].childNodes[0].style.color = 'rgb(203, 206, 45)'
+    }else if (title === 'Scaled'){
+      modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
+
+    }
+
     // console.log("projecttitle", h2)
     // if (img.height > img.width) {
     //   modalSpan.style.transform = "skew(-10deg) translateX(-30%)"

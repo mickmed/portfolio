@@ -8,6 +8,12 @@ module.exports = {
     contentBase: "./dist",
     // open: true
     historyApiFallback: true,
+    headers:{
+      "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Methods': '*',
+    }
+    
   },
   // watch: true,
   entry: "./src/index.js",

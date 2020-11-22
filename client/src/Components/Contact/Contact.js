@@ -12,6 +12,8 @@ export async function Contact() {
 
 
   const array = [
+    { type: "resumePdf", icon: '<i class="far fa-file-pdf"></i>', url: "/resume" },
+
     {
       type: "googleDocs",
       icon: '<i class="fab fa-google-drive"></i>',
@@ -31,7 +33,6 @@ export async function Contact() {
     },
     // { type: "pdf", icon: '<i class="far fa-file-pdf"></i>', url: "https://www.docdroid.net/zQfqmfj/mick-roth-resume-pdf" },
     { type: "ga", icon: `<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png"/>`, url: "https://generalassemb.ly/instructors/mick-roth/23105" },
-    { type: "resumePdf", icon: '<i class="far fa-file-pdf"></i>', url: "/resume" },
     // { type: 'mewe', icon: '<img src="https://media.cdnandroid.com/item_images/639024/imagen-mewe-0thumb.jpeg" height="80px" width="80px"/>', url: "https://mewe.com/i/mickroth1" }
 
   ]
