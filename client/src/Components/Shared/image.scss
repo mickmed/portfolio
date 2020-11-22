@@ -1,3 +1,12 @@
+// @font-face {
+//   src: local("Southland"), url("../../fonts/Southland.ttf");
+//   font-family: "Southland";
+// }
+@font-face {
+  src: local("Simple"), url("../../fonts/VeganStylePersonalUse-5Y58.ttf") format("ttf");
+  font-family: "Simple";
+}
+
 .project-img {
   position: relative;
   // width: 100%;
@@ -159,7 +168,7 @@
             padding: 3% 0;
             margin: 0 0 0 10%;
             font-family: "Overpass";
-            font-family: "Southland";
+            font-family: "Simple";
             font-weight: 300;
             // font-size: 5vw;
             // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;

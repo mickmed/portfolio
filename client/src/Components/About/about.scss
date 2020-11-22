@@ -2,9 +2,9 @@
 
 .text {
   margin: 3% 10%;
-  padding: 3% 0 20%;
+  padding: 3% 0 20% 0;
   color: black;
-  // font-family: "Overpass";
+  font-family: "Southland";
   // height:50%;
   width: 75%;
   line-height: 1.8em;
@@ -25,7 +25,7 @@
 @media only screen and (min-width: 600px) {
   .text {
     padding-bottom:1%;
-    margin-bottom:1%;
+    margin-bottom:5%;
   }
 }
 

@@ -1,5 +1,6 @@
 import { cecl, qs } from "../Helpers/domHelper.js"
 import "./image.scss"
+
 export const Image = (src, title, modal, site_url) => {
   // console.log(src)
   let projectImg = cecl("div", "project-img")
@@ -23,15 +24,14 @@ export const Image = (src, title, modal, site_url) => {
 
     console.log(title)
     if (title === 'NYC Trees') {
-      modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
-      modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
+      // modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
 
     } else if (title === 'Mick\'s Math Mental') {
-      modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
+      // modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
 
       modal.childNodes[0].childNodes[0].style.color = 'rgb(203, 206, 45)'
     }else if (title === 'Scaled'){
-      modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
+      // modal.childNodes[0].childNodes[0].style.fontFamily = "Vegan"
 
     }
 

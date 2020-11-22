@@ -8,12 +8,12 @@ module.exports = {
     contentBase: "./dist",
     // open: true
     historyApiFallback: true,
-    headers:{
+    headers: {
       "Access-Control-Allow-Origin": "*",
       'Access-Control-Allow-Headers': '*',
       'Access-Control-Allow-Methods': '*',
     }
-    
+
   },
   // watch: true,
   entry: "./src/index.js",
@@ -46,19 +46,35 @@ module.exports = {
           },
         ],
       },
-      {test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: '/src/fonts/'
-            }
+              name: '[name].[ext]!static',
+              outputPath: '/src/fonts/',
+
+             
+            },
+            // include: /node_modules/
           }
         ]
-      }
-      
-    
+
+      },
+      // {
+      //     test: /\.ttf$/,
+      //     use: [
+      //       {
+      //         loader: 'ttf-loader',
+      //         options: {
+      //           name: './font/[hash].[ext]',
+      //         },
+      //       },
+      //     ]
+      // }
+
+
     ],
   },
 }
