@@ -15,7 +15,7 @@ export async function Lessons() {
 
     const width = mainContentScrollable.clientWidth
     console.log(width)
-let frameWidth, frameHeight
+    let frameWidth, frameHeight
     if (width > 600 && width < 900) {
         frameWidth = 480
         frameHeight = 299
@@ -31,32 +31,39 @@ let frameWidth, frameHeight
     }
 
     const linkList = cecl('div', 'linked-lists')
-    linkList.innerHTML = 
-    `<div><h3>Linked Lists</h3>
+    linkList.innerHTML =
+        `<div><h3>Linked Lists</h3>
     <p>Slide 1) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
     <p>Slide 2) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
     <p>Slide 3) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <div><h3>Linked Lists</h3>
-    <p>Slide 1) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
-    <p>Slide 2) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <p>Slide 3) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <p>Slide 1) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
-    <p>Slide 2) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <p>Slide 3) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
+    
+    
+  
     </div>`
 
     const docWrapper = cecl('div', 'doc-wrapper')
     const doc = cecl('iframe', 'slides')
     doc.src = `https://docs.google.com/presentation/d/e/2PACX-1vTDsnjcpJ49de8trQkESBQbLFeeqywV_VJB_mgb5l1oqsaLTs5Rp8rS-XbDhjFeJDpqrNuZ34GGCabs/embed?start=false&loop=false&delayms=3000`
-    doc.frameborder="0" 
-    doc.allowfullscreen="true" 
-    doc.mozallowfullscreen="true" 
-    doc.webkitallowfullscreen="true"
+    doc.frameborder = "0"
+    doc.allowfullscreen = "true"
+    doc.mozallowfullscreen = "true"
+    doc.webkitallowfullscreen = "true"
 
     docWrapper.appendChild(doc)
 
+    const linkList2 = cecl('div', 'linked-lists')
+    linkList2.innerHTML =
+        `
+    <p>Slide 4) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
+    <p>Slide 5) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
+    <p>Slide 6) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
+    
+    
+    </div>`
+
     mainContentScrollable.appendChild(linkList)
     mainContentScrollable.appendChild(docWrapper)
+    mainContentScrollable.appendChild(linkList2)
     mainContentScrollable.appendChild(Footer())
 
 }
