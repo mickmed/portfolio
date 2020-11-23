@@ -6,6 +6,7 @@ const _modules = {
   Contact: ()=>import('../Components/Contact/Contact.js'),
 
   Resume: () => import('../Components/Resume/Resume.js'),
+  Lessons: ()=> import('../Components/Lessons/Lessons.js'),
   Signup:()=>import ('../Components/Login/SignUp.js'),
 };
  

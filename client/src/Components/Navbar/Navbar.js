@@ -12,6 +12,7 @@ export function Navbar(parentDiv, data, type = "about") {
     { projects: "fa-project-diagram" },
     { contact: "fa-address-card" },
     { resume: "fa-address-card" },
+    { lessons: '"fa-address-card"'}
   ]
   console.log("navbar")
   //**** ROUTER ****//
@@ -65,6 +66,8 @@ export function Navbar(parentDiv, data, type = "about") {
     const url = window.location.pathname
     const route = url.substr(1, url.length - 1) //url end
     let modName = route.charAt(0).toUpperCase() + route.slice(1) //capitalize
+
+    
 
     if (route !== "") {
       console.log(route, modName)

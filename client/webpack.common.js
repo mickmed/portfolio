@@ -46,34 +46,19 @@ module.exports = {
           },
         ],
       },
+     
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]!static',
-              outputPath: '/src/fonts/',
-
-             
-            },
-            // include: /node_modules/
+        use: [{
+          loader: 'url-loader',
+          options: {
+            name: './font/[name].[ext]',
+            outputPath: './fonts/',//dont actually use these fonts but still need to process them
+          
           }
-        ]
-
-      },
-      // {
-      //     test: /\.ttf$/,
-      //     use: [
-      //       {
-      //         loader: 'ttf-loader',
-      //         options: {
-      //           name: './font/[hash].[ext]',
-      //         },
-      //       },
-      //     ]
-      // }
-
+        }]
+      }
+      
 
     ],
   },

@@ -1,0 +1,46 @@
+.main-content-scrollable {
+    .linked-lists {
+        padding: 0 5%;
+    }
+    .doc-wrapper {
+        min-height: 25%;
+        width: 90%;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+    }
+}
+
+@media only screen and (min-width:600px){
+    .main-content-scrollable{
+        .doc-wrapper{
+            min-height: 55%;
+            iframe{
+                height:70%;
+            }
+        }
+    }
+}
+@media only screen and (min-width:900px){
+    .main-content-scrollable{
+        .doc-wrapper{
+            min-height:75%;
+            iframe{
+                height:90%;
+            }
+        }
+    }
+}
+@media only screen and (min-width:1200px){
+    .main-content-scrollable{
+        .doc-wrapper{
+            min-height: 90%;
+            iframe{
+                height:100%;
+            }
+        }
+    }
+}
