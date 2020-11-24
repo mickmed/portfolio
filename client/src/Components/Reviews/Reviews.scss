@@ -1,5 +1,5 @@
 .main-content-scrollable {
-    .linked-lists {
+    .reviews {
         padding: 0 5%;
         font-family: "Overpass";
         display:flex;
@@ -14,14 +14,15 @@
                 display: block;
                 padding: 3% 0;
                 line-height:1.8em;
-
             }
         }
     }
+    .link{
+        padding:10%;
+    }
     .doc-wrapper {
-        min-height: 35%;
+        min-height: 95%;
         width: 90%;
-
 
         iframe {
             width: 100%;

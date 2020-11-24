@@ -12,7 +12,9 @@ export function Navbar(parentDiv, data, type = "about") {
     { projects: "fa-project-diagram" },
     { contact: "fa-address-card" },
     { resume: "fa-address-card" },
-    { lessons: '"fa-address-card"'}
+    { lessons: "fa-address-card"},
+    { reviews: "fa-address-card"}
+  
   ]
   console.log("navbar")
   //**** ROUTER ****//

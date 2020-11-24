@@ -33,12 +33,9 @@ export async function Lessons() {
     const linkList = cecl('div', 'linked-lists')
     linkList.innerHTML =
         `<div><h3>Linked Lists</h3>
-    <p>Slide 1) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
-    <p>Slide 2) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <p>Slide 3) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
+    <p>Slide 1) The unshift method calls the Node class and adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
+    <p>Slide 2) The push method calls the node class and adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
     
-    
-  
     </div>`
 
     const docWrapper = cecl('div', 'doc-wrapper')
@@ -48,15 +45,15 @@ export async function Lessons() {
     doc.allowfullscreen = "true"
     doc.mozallowfullscreen = "true"
     doc.webkitallowfullscreen = "true"
-
     docWrapper.appendChild(doc)
 
     const linkList2 = cecl('div', 'linked-lists')
     linkList2.innerHTML =
-        `
-    <p>Slide 4) The unshift method adds a new node to the beginning of the linked list. We can see that as each new node is created <i>this.next</i> points to the following node.</p>
-    <p>Slide 5) The push method adds a new node to the end of the linked list. The <i>this.next</i> property of the previous node points to our new node.</p>
-    <p>Slide 6) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
+        `<div>
+        <p>Slide 3) The insertAt method adds a new node to the specified position in the list. The <i>this.next</i> property of the previous node points to our new node.</p>
+    <p>Slide 4) The getAt method retrieves the given node at the given index.</p>
+    <p>Slide 5) The deleteAt removes a given node at the given index.</p>
+   
     
     
     </div>`
