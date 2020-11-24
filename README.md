@@ -1,27 +1,52 @@
 ***Mick Roth***
 
 
-# Portfolio Server
+# Portfolio
 
-This is the backend for my portfolio site
+This is a personal portfolio demonstrating projects.
 
+It is built with vanilla Javascript and a [Rails backend](https://portfolio-server-mick.herokuapp.com)
+ 
 
 
 ### &#127803; Technologies	
+- Javascript
+- Webpack
+- Sass
+- Font-Awesome
+  <br>
 - Ruby on Rails
-- PostgreSQL
+- Postgresql
 - BCrypt
 - JWT
+- Heroku
+  
 
 <br>
 
 ### &#x1F3E1; Deployed
+- [Current Site](https://mick-roth.surge.sh)
+
+- [Old Version](https://github.com/mickmed/portfolio-server-old)
+<br>
+
+
+### &#127803; Flow Chart
+
+  
+ ![](./client/src/img/flow-chart.png)
+
+<br>
+
+
+
+
+### &#x1F3E1; Backend
 - [heroku](https://portfolio-server-mick.herokuapp.com)
 
 <br>
 
 
 
-### &#127803; Put to bed
-- [Old Version](https://github.com/mickmed/portfolio-server-old)
+
 
