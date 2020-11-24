@@ -23,16 +23,19 @@ export async function Resume() {
 
   // </object>
 
+  const link = cecl('a', 'link')
+  link.href = "https://www.keepandshare.com/doc9/25242/mickrothresume-pdf-25k?da=y"
+  link.innerHTML = 'link to original document'
+  link.target = '_blank'
+
+
+  const resumePdf = cecl('iframe', 'resume-pdf')
+  resumePdf.src = PdfFile
 
 
 
-  const resu = `<iframe class='resume-pdf' src=${PdfFile}></iframe>`
-
-
-
-
-  mainContentScrollable.innerHTML = resu
-
+  mainContentScrollable.appendChild(link)
+  mainContentScrollable.appendChild(resumePdf)
   mainContentScrollable.appendChild(Footer())
 
 }
