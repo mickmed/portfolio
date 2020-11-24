@@ -27,8 +27,7 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 ### &#x1F3E1; Deployed
 - [Current Site](https://mick-roth.surge.sh)
 
-- [Old Version](https://github.com/mickmed/portfolio-server-old)
-<br>
+
 
 
 ### &#127803; Flow Chart
@@ -47,6 +46,10 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 <br>
 
 
+### &#x1F3E3; Backend
+- [Current](https://portfolio-server-mick.herokuapp.com)
+- [Old Version](https://github.com/mickmed/portfolio-server-old)
+<br>
 
 
 
