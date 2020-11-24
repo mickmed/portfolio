@@ -16,6 +16,9 @@ export const MainContent = () => {
 
   mainContent.appendChild(cecl("div", "main-content-scrollable"))
 
+  const title = mainContent.appendChild(cecl('h3', 'title'))
+  title.innerText = 'Mick Roth - Software Engineer'
+
   let className = "see-more-btn"
 
   const el = mainContent.children[2]

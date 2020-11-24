@@ -64,6 +64,18 @@
 		z-index: 10;
 
 	}
+	.title{
+		position: absolute;
+		top:0;
+	
+		transform: translateX(50%);
+		font-family: 'Overpass';
+		width:50%;
+		margin: 3% auto;
+		text-align:center;
+		font-size:75%;
+	
+	}
 	@media only screen and (min-width: 600px) {
 		// width: 85%;
 		.burger {
@@ -74,6 +86,9 @@
 				border-bottom: 2px solid #bbb;
 				width: 5%;
 			}
+		}
+		.title{
+			font-size:50%;
 		}
 	}
 }
@@ -88,3 +103,4 @@
     opacity: 1;
   }
 }
+
