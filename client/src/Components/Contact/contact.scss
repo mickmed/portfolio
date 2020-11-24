@@ -4,8 +4,9 @@
     display: flex;
     justify-content: center;
     overflow-y: scroll;
-    height: 100%;
+    min-height: 90%;
     scrollbar-width: none;
+    width:80%;
    
     animation: fadein 1s forwards;
 
@@ -18,6 +19,7 @@
         padding:3%;
         box-sizing:border-box;
         height: 100%;
+        width:90%;
        
     
         .option {
@@ -26,19 +28,19 @@
             align-items: center;
             border: 3px solid lightblue;
             border-radius:5%;
-            min-width: 48%;
-            font-size: 5em;
+            width: 38%;
+            font-size: 300%;
             font-family: "Overpass";
             opacity: 0.7;
             box-sizing: border-box;
             margin:1%;
-          
+        //   height:100%;
             a{
-                height:75%;
+                // height:50%;
             }
             a img{
-                height:75%;
-                transform:translateX(-30%);
+                height:50%;
+                transform:translateX(0%);
             }
             .fa-google-drive {
                 color: green;
@@ -66,6 +68,18 @@
     }
 }
 
+@media only screen and (min-width:600px){
+    .resume{
+        .res-img-wrapper{
+            .option{
+                // font-size: 500%;
+                width:48%;
+                font-size:500%;
+                padding:2%;
+            }
+        }
+    }
+}
 
 @keyframes fadein {
     from {

@@ -19,7 +19,7 @@ export async function Reviews() {
     const reviews = cecl('div', 'reviews')
     reviews.innerHTML =
     `<div><h3>Student Feedback</h3>
-    <p>I have been working as both a Teaching Assistant and an Instructional Associalte for the Software Engineering Immersive program at General Assembly in New York for almost 2 years. The following spreadsheet shows student feedback for the last three cohorts. Please use the tabs on the bottom for respective cohorts: 'Dragonflies', 'Neptune', 'Mandalorians'.</p>
+    <p>I have been working as both a Teaching Assistant and an Instructional Associalte for the Software Engineering Immersive program at General Assembly in New York for almost 2 years. The following spreadsheet shows student feedback for the last three cohorts. Please use the tabs on the bottom for respective cohorts: 'Dragonflies', 'Neptune', and 'Mandalorians'.</p>
     </div>`
 
 
