@@ -1,46 +1,50 @@
-.navbar{
-    position:relative;
-    z-index:2;
-    margin:0 3%;
+.navbar {
+    position: relative;
+    z-index: 2;
+    margin: 0 3%;
 }
 
-.navbar div{
-    z-index:1;
-    margin:2em 0;
-    font-size:3vw;
-   
-
+.navbar div {
+    z-index: 1;
+    margin: 60% 0;
+    font-size: 3vw;
 }
-.navbar div a{
-    color:white;
-    font-size:1em;
-    font-family:overpass;
+.navbar div a {
+    color: white;
+    font-size: 100%;
+    font-family: overpass;
     // color:rgb(255, 255, 255);
-    text-decoration:none;
-    cursor:pointer;
-    
+    text-decoration: none;
+    cursor: pointer;
 }
-
-
 
 @media only screen and (min-width: 600px) {
-        
-    .navbar{
-        div{
-            font-size:2vw;
+    .navbar {
+        div {
+            margin:25% 0;
+            a {
+                font-size: 55%;
+            }
         }
     }
-   
-
 }
-
 @media only screen and (min-width: 900px) {
-        
-    .navbar{
-        div{
-            font-size:1.3vw;
+    .navbar {
+        div {
+            margin: 30% 0;
+            a {
+                font-size: 50%;
+            }
         }
     }
-   
-
+}
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        div {
+            margin: 30% 0;
+            a {
+                font-size: 50%;
+            }
+        }
+    }
 }
