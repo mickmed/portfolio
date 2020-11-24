@@ -40,14 +40,9 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 
 
 
-### &#x1F3E1; Backend
-- [heroku](https://portfolio-server-mick.herokuapp.com)
-
-<br>
-
 
 ### &#x1F3E3; Backend
-- [Current](https://portfolio-server-mick.herokuapp.com)
+- [Current (heroku)](https://portfolio-server-mick.herokuapp.com)
 - [Old Version](https://github.com/mickmed/portfolio-server-old)
 <br>
 
