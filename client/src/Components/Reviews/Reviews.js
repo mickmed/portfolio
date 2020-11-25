@@ -24,11 +24,11 @@ export async function Reviews() {
 
 
     const link = cecl('a', 'link')
-    link.href = `https://docs.google.com/spreadsheets/d/1SIv76YOLPMb44BNggmPQGBRfsRWYXxvS2bdW-UjxtZc/edit#gid=1449145157`
+    link.href = `https://docs.google.com/spreadsheets/d/1oUd0dzhXyeYmKbYU8oponht2A3wZ-P-XcuL4sdqGGnw/edit#gid=2024481173`
     link.innerHTML = 'link to orginal document'
     link.target = '_blank'
 
-    
+
     const docWrapper = cecl('div', 'doc-wrapper')
     const doc = cecl('iframe', 'slides')
     doc.src = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTWFrqqrBBnQJsGQEhF4-0PCrV-nt8O8h2U2PpgGZuQTJ2UbnmcUYiHNV_5mgzJv6g_AdYqfkVtmhV8/pubhtml?widget=true&amp;headers=false`

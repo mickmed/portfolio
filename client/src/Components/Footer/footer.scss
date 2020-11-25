@@ -10,11 +10,10 @@
 
     padding: 5% 7% 10%;
     box-sizing: border-box;
-   
+
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-  
 
     .copyright {
         color: rgb(189, 75, 75) !important;
@@ -22,21 +21,23 @@
     .icons {
         display: flex;
         justify-content: space-around;
-        width:100%;
-        flex-wrap:wrap;
-       
+        width: 100%;
+        flex-wrap: wrap;
+
         .footer-link {
             text-decoration: none;
             color: rgb(189, 75, 75) !important;
-            font-size: 5vw;
-        }
-    }
-
-    @media only screen and (min-width:600px){
-        .icons{
-            font-size:3vw;
+            font-size: 200%;
         }
     }
 }
 
-
+@media only screen and (min-width: 600px) {
+    .footer {
+        .icons {
+            .footer-link {
+                font-size:120%;
+            }
+        }
+    }
+}

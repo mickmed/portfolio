@@ -118,6 +118,7 @@ export async function Projects() {
         // innerImgWrap[index].style.height = '100%'
 
       } else if (bool === "false") {
+        console.log(bool)
         bool = "true"
         innerImgWrap[index].classList.add("open-curtain")
         innerImgWrap[index].classList.remove("close-curtain")
@@ -144,10 +145,18 @@ export async function Projects() {
         }
 
 
+        if(containerWidth < 900){
+          console.log('900-')
+image.appendChild(techIcons) 
+        }      
+        else{
+          console.log('900+')
+          innerImgWrap[index].appendChild(techIcons)
+
+        }
 
 
 
-        image.appendChild(techIcons)
         console.log(image)
 
         let iw = imgWrapper[index].style

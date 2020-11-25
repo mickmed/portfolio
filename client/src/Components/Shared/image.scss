@@ -182,6 +182,7 @@
       }
     }
   }
+  
   .open-curtain:hover .modal {
     animation: open-curtain 1s linear forwards;
     // animation: animate-img-wrapper 1.5s linear forwards;
@@ -242,8 +243,15 @@
 
 @media only screen and (min-width: 900px) {
   .project-img{
+    position:relative;
     .tech-icons{
-      // width:10%;
+      position:absolute;
+      bottom: -25%;
+      width:80%;
+      margin:0 auto;
+      .tech-icon{
+        width:8%;
+      }
     }
   }
   .project-title {
