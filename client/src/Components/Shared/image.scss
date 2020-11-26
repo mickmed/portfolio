@@ -28,6 +28,7 @@
     padding: 5% 10%;
     display: flex;
     justify-content: space-around;
+    font-size:250%;
     div {
       display: flex;
       flex-direction: column;
@@ -244,7 +245,7 @@
     }
     .link-modal {
       .link-modal-icons {
-        // font-size: 500%;
+       
 
         a {
           background: white;
@@ -274,5 +275,6 @@
     color: green;
   }
   .link-modal-icons {
+    font-size:200%;
   }
 }
