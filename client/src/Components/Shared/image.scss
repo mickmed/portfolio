@@ -28,7 +28,7 @@
     padding: 5% 10%;
     display: flex;
     justify-content: space-around;
-    font-size:130%;
+    font-size: 130%;
     div {
       display: flex;
       flex-direction: column;
@@ -178,24 +178,24 @@
             /* width: 50%; */
             transform: skew(10deg, 0);
             font-size: 3vw;
-            position:relative;
+            position: relative;
           }
-          .build-date{
-          position:absolute;
-          top:75%;
-          left:30%;
-            color:white;
+          .build-date {
+            position: absolute;
+            top: 75%;
+            left: 30%;
+            color: white;
             // transform:translate(25%, -200%);
-            font-family: 'Overpass';
-            font-style:normal;
-            font-size:60%;
-            transform:skew(10deg, 0);
+            font-family: "Overpass";
+            font-style: normal;
+            font-size: 60%;
+            transform: skew(10deg, 0);
           }
         }
       }
     }
   }
-  
+
   .open-curtain:hover .modal {
     animation: open-curtain 1s linear forwards;
     // animation: animate-img-wrapper 1.5s linear forwards;
@@ -236,8 +236,8 @@
               font-size: 2vw;
               color: white;
             }
-            .build-date{
-              font-size:70%;
+            .build-date {
+              font-size: 70%;
             }
           }
         }
@@ -245,8 +245,6 @@
     }
     .link-modal {
       .link-modal-icons {
-       
-
         a {
           background: white;
           font-size: 100%;
@@ -258,15 +256,27 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .project-img{
-    position:relative;
-    .tech-icons{
-      position:absolute;
+  .project-img {
+    position: relative;
+    .img-wrapper{
+      .inner-img-wrap{
+        .modal{
+          .modal-span{
+            .build-date{
+              font-size:80%;
+            }
+
+          }
+        }
+      }
+    }
+    .tech-icons {
+      position: absolute;
       bottom: -25%;
-      width:80%;
-      margin:0 auto;
-      .tech-icon{
-        width:8%;
+      width: 80%;
+      margin: 0 auto;
+      .tech-icon {
+        width: 8%;
       }
     }
   }
@@ -275,6 +285,6 @@
     color: green;
   }
   .link-modal-icons {
-    font-size:200%;
+    font-size: 200%;
   }
 }

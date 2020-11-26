@@ -42,13 +42,12 @@ class TechnologiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_technology
       @technology = Technology.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def technology_params
-      params.fetch(:technology, {})
+      params.require(:technology).permit(:name, :icon_url)
     end
 end
