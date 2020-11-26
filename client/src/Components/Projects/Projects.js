@@ -43,9 +43,12 @@ export async function Projects() {
   const containerWidth = mainContent.clientWidth
 
   resp.forEach(async (project, index) => {
-    let projectWrap = mainContent.appendChild(cecl("div", "project-wrap"))
-    let image = projectWrap.appendChild(
-      Image(`src/img/${project.img_url}`, project.name, true, project.site_url)
+
+    
+
+    const projectWrap = mainContent.appendChild(cecl("div", "project-wrap"))
+    const image = projectWrap.appendChild(
+      Image(`src/img/${project.img_url}`, project.name, true, project.site_url, project.build_date)
     )
     console.log(image)
     let bool = "false"
@@ -123,7 +126,6 @@ export async function Projects() {
         innerImgWrap[index].classList.add("open-curtain")
         innerImgWrap[index].classList.remove("close-curtain")
         imgWrapper[index].appendChild(linkModal)
-
 
 
         if (containerWidth < 900) {

@@ -49,7 +49,7 @@ export const addProject = async (body) => {
 
 
 export const updateProject = async (body, id) => {
-  console.log(JSON.stringify(body))
+  console.log((body))
   const res = await fetch(`${baseUrl}/projects/${id}`, {
     method: `put`,
     body: JSON.stringify(body),

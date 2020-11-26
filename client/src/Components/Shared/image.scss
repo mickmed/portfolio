@@ -153,7 +153,7 @@
           position: absolute;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
+          justify-content: space-between;
           /* align-items: flex-end; */
           width: 45%;
           height: 100%;
@@ -177,6 +177,18 @@
             /* width: 50%; */
             transform: skew(10deg, 0);
             font-size: 3vw;
+            position:relative;
+          }
+          .build-date{
+          position:absolute;
+          top:75%;
+          left:30%;
+            color:white;
+            // transform:translate(25%, -200%);
+            font-family: 'Overpass';
+            font-style:normal;
+            font-size:60%;
+            transform:skew(10deg, 0);
           }
         }
       }
@@ -222,6 +234,9 @@
             h2.project-title {
               font-size: 2vw;
               color: white;
+            }
+            .build-date{
+              font-size:70%;
             }
           }
         }

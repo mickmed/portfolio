@@ -2,7 +2,7 @@ import { cecl, qs } from "../Helpers/domHelper.js"
 import "./image.scss"
 
 
-export const Image = (src, title, modal, site_url) => {
+export const Image = (src, title, modal, site_url, buildDate) => {
   // console.log(src)
   let projectImg = cecl("div", "project-img")
 
@@ -20,10 +20,14 @@ export const Image = (src, title, modal, site_url) => {
     let modal = div.appendChild(cecl("div", "modal"))
     modal.classList.add("project-modal", "modal-slide")
     let modalSpan = modal.appendChild(cecl("span", "modal-span"))
-    let h2 = modal.childNodes[0].appendChild(cecl("h2", "project-title"))
-    modal.childNodes[0].childNodes[0].innerText = title
+    let h2 = modal.childNodes[0].appendChild(cecl('h2', 'project-title'))
+    h2.innerHTML = title
+    modal.childNodes[0].append(h2)
+    let buildDateStr = modal.childNodes[0].appendChild(cecl('div', 'build-date'))
+    buildDateStr.innerHTML = new Date(buildDate).getFullYear()
+    modal.childNodes[0].append(buildDateStr)
 
-    console.log(title)
+
     // if (title === 'NYC Trees') {
     //   // modal.childNodes[0].childNodes[0].style.fontFamily = "Maitree"
 
