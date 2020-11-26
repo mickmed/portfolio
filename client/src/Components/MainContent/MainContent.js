@@ -36,33 +36,21 @@ export const MainContent = () => {
 
     const el = parent.children[2]
 
-    if (el.scrollTop > 1) {
-      className = "see-more-btn-flip"
-      e.target.parentElement.classList.toggle("see-more-btn-flip")
-      let i = el.scrollTop
-      let int = setInterval(() => {
-        el.scrollTo(0, i)
-
-        i -= 1
-        if (i === 0) {
-          // console.log('more2')
-          clearInterval(int)
-        }
-      }, 1)
-    } else {
-      console.log("less")
+    if(el.scrollTop <1 ){
       className = "see-more-btn"
-      e.target.parentElement.classList.toggle("see-more-btn-flip")
-      let i = 1
-      let int = setInterval(() => {
-        el.scrollTo(0, i)
+      // e.target.parentElement.classList.toggle("see-more-btn-flip")
+      let j = el.scrollTop
+      let intDown = setInterval(() => {
+        j += 10
+        el.scrollTo({top:j, behavior:'smooth'})
 
-        i += 1
+
+      
+        console.log(el.scrollHeight, el.scrollTop, el.clientHeight, j)
         if (el.scrollHeight - el.scrollTop === el.clientHeight) {
-          clearInterval(int)
-          console.log("less2")
+          clearInterval(intDown)
         }
-      }, 1)
+      }, 10)
     }
   }
 

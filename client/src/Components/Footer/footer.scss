@@ -23,11 +23,13 @@
         justify-content: space-around;
         width: 100%;
         flex-wrap: wrap;
+        transform:translate(0, -20px);
+
 
         .footer-link {
             text-decoration: none;
             color: rgb(189, 75, 75) !important;
-            font-size: 200%;
+            font-size: 160%;
         }
     }
 }
