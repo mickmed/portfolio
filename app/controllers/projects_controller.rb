@@ -6,11 +6,11 @@ class ProjectsController < ApplicationController
   # GET /projects
   def index
     @projects = Project.all
-    # sorted = @projects.sort_by {|k| k['build_date']}
+    @sorted = @projects.sort_by {|k| k['build_date']}
     # sorted = @projects
 
     # puts 'sorted', sorted
-    render json: @projects.reverse, include: :technologies
+    render json: @sorted.reverse, include: :technologies
   end
 
   # GET /projects/1
