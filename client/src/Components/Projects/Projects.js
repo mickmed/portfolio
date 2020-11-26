@@ -145,11 +145,11 @@ export async function Projects() {
         }
 
 
-        if(containerWidth < 900){
+        if (containerWidth < 900) {
           console.log('900-')
-image.appendChild(techIcons) 
-        }      
-        else{
+          image.appendChild(techIcons)
+        }
+        else {
           console.log('900+')
           innerImgWrap[index].appendChild(techIcons)
 
@@ -206,10 +206,11 @@ image.appendChild(techIcons)
   ADD PROJECT 
   ************/
   if (await verify()) {
+    console.log('not fair')
     let addBtn = Button("show-add-form", "submit", "add project")
     addBtn.addEventListener("click", () => {
-      console.log(mainContent.lastChild.className)
-      if (mainContent.lastChild.className === "show-add-form")
+      console.log(mainContent.lastChild.previousSibling.className)
+      if (mainContent.lastChild.previousSibling.className === "show-add-form")
         EditProject(mainContent, resp[0], "addProject")
       else {
         mainContent.lastChild.remove()
