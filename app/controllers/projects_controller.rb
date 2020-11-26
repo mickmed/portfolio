@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
     # sorted = @projects
 
     # puts 'sorted', sorted
-    render json: projects.reverse, include: :technologies
+    render json: @projects.reverse, include: :technologies
   end
 
   # GET /projects/1
