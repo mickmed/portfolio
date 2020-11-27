@@ -24,11 +24,13 @@ export const MainContent = () => {
 
   const gohere = (e) => {
 
+console.log(mainContentScrollable.scrollTop)
 
-
-    if (mainContentScrollable.scrollTop === 0) {
+    if (mainContentScrollable.scrollTop < 50) {
+      console.log('zero')
       scrollableContent.scrollIntoView({ block: 'end', behavior: 'smooth' })
     } else {
+      console.log('plus')
       scrollableContent.scrollIntoView({ block: 'start', behavior: 'smooth' })
     }
   }
