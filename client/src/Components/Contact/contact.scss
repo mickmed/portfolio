@@ -1,4 +1,4 @@
-.resume {
+.contact {
     // min-height: 100%;
     margin: 1%;
     display: flex;
@@ -6,7 +6,7 @@
     overflow-y: scroll;
     min-height: 90%;
     scrollbar-width: none;
-    width:80%;
+    // width:80%;
    
     animation: fadein 1s forwards;
 
@@ -69,7 +69,7 @@
 }
 
 @media only screen and (min-width:600px){
-    .resume{
+    .contact{
         .res-img-wrapper{
             .option{
                 // font-size: 500%;

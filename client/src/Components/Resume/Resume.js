@@ -14,7 +14,7 @@ const PdfFile = `${loc}/src/img/mickrothresume.pdf`
 
 export async function Resume() {
   console.log('pdf')
-  let mainContentScrollable = qs(".main-content-scrollable")
+  let mainContentScrollable = qs(".scrollable-content")
   while (mainContentScrollable.childNodes.length) {
     mainContentScrollable.removeChild(mainContentScrollable.lastChild)
   }

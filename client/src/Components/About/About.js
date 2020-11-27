@@ -9,7 +9,7 @@ export async function About() {
   let text2 =
     "You can see some projects <span class='projects-link'>here</span>. I mostly build full-stack Javascript apps with React, Node, Sequelize, Express, and Postgres. I also enjoy Vanilla Javascript. Other front-end tools are CSS, JQuery, Bootstrap, and Mapbox. This site was built with Vanilla Javascript and comprizes of a Rails backend."
   // console.log("ABOUT")
-  let mainContentScrollable = qs(".main-content-scrollable")
+  let mainContentScrollable = qs(".scrollable-content")
   console.log(mainContentScrollable.childNodes)
   while (mainContentScrollable.childNodes.length) {
     mainContentScrollable.removeChild(mainContentScrollable.lastChild)

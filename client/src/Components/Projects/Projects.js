@@ -27,7 +27,10 @@ const clearPage = (element) => {
 }
 
 export async function Projects() {
-  let mainContent = qs(".main-content-scrollable")
+
+  const mainContent = qs('.scrollable-content')
+  // console.log('contenta', contenta)
+  // let mainContent = qs(".main-content-scrollable")
   clearPage(mainContent)
   let loading = mainContent.appendChild(cecl("div", "loading"))
   loading.innerHTML = "loading..."
@@ -41,6 +44,8 @@ export async function Projects() {
 
 
   const containerWidth = mainContent.clientWidth
+  // const scrollableContent = cecl('div', 'scrollable-content')
+  // mainContent.appendChild(scrollableContent)
 
   resp.forEach(async (project, index) => {
 

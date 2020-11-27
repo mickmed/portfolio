@@ -1,13 +1,14 @@
-.resume-pdf {
-  min-height: 70%;
+iframe.resume-pdf {
+  min-height: 70vh;
   width: 90%;
+  margin:0 auto;
 }
 .link{
   padding:3%;
 }
 
 @media only screen and (min-width: 600px) {
-  .resume-pdf {
-    min-height: 90%;
+  iframe.resume-pdf {
+    min-height: 90vh;
   }
 }

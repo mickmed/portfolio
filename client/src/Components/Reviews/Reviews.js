@@ -7,7 +7,7 @@ import './Reviews.scss'
 export async function Reviews() {
 
 
-    const mainContentScrollable = await qs(".main-content-scrollable");
+    const mainContentScrollable = await qs(".scrollable-content")
     console.log(mainContentScrollable)
     while (mainContentScrollable.childNodes.length) {
         mainContentScrollable.removeChild(mainContentScrollable.lastChild)

@@ -46,7 +46,7 @@ export async function Contact() {
 
 
   // console.log('resume')
-  let mainContentScrollable = qs(".main-content-scrollable")
+  let mainContentScrollable = qs(".scrollable-content")
   while (mainContentScrollable.childNodes.length) {
     mainContentScrollable.removeChild(mainContentScrollable.lastChild)
   }
@@ -54,7 +54,7 @@ export async function Contact() {
 
 
 
-  let resume = mainContentScrollable.appendChild(cecl("div", "resume"))
+  let resume = mainContentScrollable.appendChild(cecl("div", 'contact'))
   let resImgWrapper = resume.appendChild(cecl("div", "res-img-wrapper"))
 
   array.forEach((opt, i) => {
