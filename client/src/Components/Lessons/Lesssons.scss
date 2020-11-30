@@ -2,9 +2,9 @@
     .linked-lists {
         padding: 0 5%;
         font-family: "Overpass";
-        display:flex;
+        display: flex;
         justify-content: flex-start;
-        width:90%;
+        width: 90%;
 
         div {
             display: flex;
@@ -13,8 +13,7 @@
             p {
                 display: block;
                 padding: 3% 0;
-                line-height:1.8em;
-
+                line-height: 1.8em;
             }
         }
     }
@@ -22,44 +21,49 @@
         min-height: 35%;
         width: 90%;
 
-
         iframe {
             width: 100%;
             height: 100%;
             background: white;
         }
     }
-    .link{
-        padding:3%;
+    .link {
+        padding: 3%;
     }
 }
 
 @media only screen and (min-width: 600px) {
     .main-content-scrollable {
-        .doc-wrapper {
-            min-height: 55%;
-            iframe {
-                height: 70%;
+        .scrollable-content {
+            .doc-wrapper {
+                min-height: 55%;
+                iframe {
+                    height: 70%;
+                }
             }
         }
     }
 }
 @media only screen and (min-width: 900px) {
     .main-content-scrollable {
-        .doc-wrapper {
-            min-height: 75%;
-            iframe {
-                height: 90%;
+        .scrollable-content {
+            .doc-wrapper {
+                min-height: 75%;
+                iframe {
+                    height: 90%;
+                }
             }
         }
     }
 }
 @media only screen and (min-width: 1200px) {
     .main-content-scrollable {
-        .doc-wrapper {
-            min-height: 90%;
-            iframe {
-                height: 100%;
+        .scrollable-content {
+            .doc-wrapper {
+                min-height: 90%;
+                iframe {
+                    height: 100%;
+                }
             }
         }
     }
