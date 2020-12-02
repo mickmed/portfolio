@@ -43,7 +43,7 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 
 ### &#127803; ERD
 
-![](./src/img/portfolio-erd.png)
+![ERD](./src/img/portfolio-erd.png)
 
 
 
