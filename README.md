@@ -40,6 +40,7 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
  ![](./client/src/img/flow-chart.png)
 
 <br>
+
 ### &#127803; ERD
 
   

@@ -31,7 +31,7 @@ export async function Reviews() {
 
     const docWrapper = cecl('div', 'doc-wrapper')
     const doc = cecl('iframe', 'slides')
-    doc.src = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTWFrqqrBBnQJsGQEhF4-0PCrV-nt8O8h2U2PpgGZuQTJ2UbnmcUYiHNV_5mgzJv6g_AdYqfkVtmhV8/pubhtml?widget=true&amp;headers=false`
+    doc.src = `https://docs.google.com/spreadsheets/d/1oUd0dzhXyeYmKbYU8oponht2A3wZ-P-XcuL4sdqGGnw/edit#gid=2024481173`
     doc.widget = 'true'
     doc.headers = 'false'
     docWrapper.appendChild(doc)
