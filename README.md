@@ -25,7 +25,11 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 <br>
 
 ### &#x1F3E1; Deployed
-- [Current Site](https://mick-roth.surge.sh)
+- [Current Site](https://mickroth.com)
+
+- [2.1](https://mick-roth.surge.sh)
+- [2.0](https://mickroth.surge.sh)
+- [1.0]()
 
 
 
@@ -37,7 +41,9 @@ It is built with vanilla Javascript and a [Rails backend](https://portfolio-serv
 
 <br>
 
+### &#127803; ERD
 
+![](./src/img/portfolio-erd.png)
 
 
 
