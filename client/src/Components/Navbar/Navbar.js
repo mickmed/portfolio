@@ -17,50 +17,7 @@ export function Navbar(parentDiv, data, type = "about") {
   
   ]
   console.log("navbar")
-  //**** ROUTER ****//
-  // let Navigo = require("navigo")
-  // let root = null
-  // let useHash = false // Defaults to: false
-  // let router = new Navigo(root)
-  // router
-  //   .on({
-  //     "/signup": function () {
-  //       RouterModules.modules.SignUp().then((module) => module.SignUp())
-  //     },
-  //     projects: function () {
-  //       // console.log("project route")
-  //       RouterModules.modules.Projects().then((module) => module.Projects())
-  //     },
-  //     "projects/edit/:id": function (params) {
-  //       // console.log("project route")
-  //       RouterModules.modules
-  //         .MakeForm()
-  //         .then((module) => module.MakeForm(params.id))
-  //     },
-
-  //     about: function () {
-  //       // console.log("about route")
-  //       RouterModules.modules.About().then((module) => module.About())
-  //     },
-  //     resume: function () {
-  //       // console.log("resume route")
-  //       RouterModules.modules.Resume().then((module) => module.Resume())
-  //     },
-  //     "*": function () {
-  //       // console.log("root route")
-  //       RouterModules.modules.About().then((module) => module.About())
-  //     },
-  //   })
-  //   .resolve()
-
-  // router
-  //   .notFound(function () {
-  //     // pageNotFoundController()
-  //     router.navigate(route)
-  //     console.log("here not found")
-  //   })
-  //   .resolve()
-  // document.body.appendChild(Container())
+  
 
   //**** NAVBAR ****//
 

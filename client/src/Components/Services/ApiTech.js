@@ -4,7 +4,7 @@ const baseUrl = BaseUrl()
 
 
 
-export let getTechnologies = async (type) => {
+export let getTechnologies = async () => {
   let results = await fetch(`${baseUrl}/technologies`)
     .then((res) => {
 
@@ -14,5 +14,22 @@ export let getTechnologies = async (type) => {
       return ans
     })
 
-  return type, results
+  return results
 }
+
+export const updateTechnology = async (body, id) => {
+  
+  const res = await fetch(`${baseUrl}/technologies/${id}`, {
+    method: `put`,
+    body: JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((json) => {
+      return json.json()
+    })
+    .then((data) => {
+      return data
+    })
+
+}
+

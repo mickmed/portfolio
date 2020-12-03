@@ -7,6 +7,8 @@ const _modules = {
 
   Resume: () => import('../Components/Resume/Resume.js'),
   Lessons: ()=> import('../Components/Lessons/Lessons.js'),
+
+  Technologies: ()=> import('../Components/Technologies/Technologies.js'),
   Reviews: ()=> import('../Components/Reviews/Reviews.js'),
   Signup:()=>import ('../Components/Login/SignUp.js'),
 };

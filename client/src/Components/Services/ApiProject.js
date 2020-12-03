@@ -31,8 +31,8 @@ export let getProject = async (id) => {
 
 
 export const addProject = async (body) => {
-  console.log('ere')
-  console.log(JSON.stringify(body))
+ 
+ 
   const res = await fetch(`${baseUrl}/projects`, {
     method: `post`,
     body: JSON.stringify(body),
@@ -49,7 +49,7 @@ export const addProject = async (body) => {
 
 
 export const updateProject = async (body, id) => {
-  console.log((body))
+  
   const res = await fetch(`${baseUrl}/projects/${id}`, {
     method: `put`,
     body: JSON.stringify(body),

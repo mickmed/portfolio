@@ -8,10 +8,8 @@ import { Footer } from "../Footer/Footer.js"
 
 import {
   getProjects,
-  addProject,
-  updateProject,
   deleteProject,
-  updateProjectTechnologies,
+
 } from "../Services/ApiProject.js"
 import { Form, Input, Button, Checkbox, Label } from "../Shared/Form.js"
 import { EditProject } from "./EditProject"
@@ -49,7 +47,7 @@ export async function Projects() {
 
   resp.forEach(async (project, index) => {
 
-    
+
 
     const projectWrap = mainContent.appendChild(cecl("div", "project-wrap"))
     const image = projectWrap.appendChild(
@@ -213,7 +211,7 @@ export async function Projects() {
   ADD PROJECT 
   ************/
   if (await verify()) {
-    console.log('not fair')
+
     let addBtn = Button("show-add-form", "submit", "add project")
     addBtn.addEventListener("click", () => {
       console.log(mainContent.lastChild.previousSibling.className)

@@ -1,9 +1,7 @@
 import { cl, cecl, ca, qs, ac } from "../Helpers/domHelper"
 import { Burger } from "../Shared/Burger.js"
 import { MailTo } from "../Shared/MailTo.js"
-import { Router } from "../../Router/Router.js"
 
-import { Footer } from "../Footer/Footer.js"
 import { Form, Input, Button, Checkbox, Label } from "../Shared/Form.js"
 
 import "./mainContent.scss"

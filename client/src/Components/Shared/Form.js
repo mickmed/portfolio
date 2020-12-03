@@ -27,7 +27,9 @@ export const Form = (className) => {
 }
 
 export const Input = (inputAtts) => {
+  console.log(inputAtts)
   const { className, name, type, value, placeholder, handleChange } = inputAtts
+  console.log(className)
   let input = createElement(`input`)
   input.className = className
   input.name = name

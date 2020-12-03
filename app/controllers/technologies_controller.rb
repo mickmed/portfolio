@@ -4,7 +4,7 @@ class TechnologiesController < ApplicationController
   # GET /technologies
   def index
     @technologies = Technology.all
-
+puts @technologies, 'techs'
     render json: @technologies
   end
 
@@ -26,9 +26,9 @@ class TechnologiesController < ApplicationController
 
   # PATCH/PUT /technologies/1
   def update
-    @project = Project.find(params[:project_id])
+    # @project = Project.find(params[:project_id])
     
-    @technology.projects << @project
+    # @technology.projects << @project
     if @technology.update(technology_params)
       render json: @technology
     else
