@@ -23,3 +23,5 @@
 /config/master.key
 
 .vscode
+
+/db/seeds.rb

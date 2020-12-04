@@ -12,12 +12,7 @@ import "./signup.scss"
 
 
 export const Signup = async () => {
-  console.log('here')
-
-  // const body = {
-  //   user: { username: "ted", email: "ted@ted.com", password: "123456" },
-  // }
-  console.log("EDIT PROJECTS")
+ 
   let mainContent = qs(".main-content-scrollable")
   while (mainContent.childNodes.length > 1) {
     mainContent.removeChild(mainContent.lastChild)
@@ -25,7 +20,7 @@ export const Signup = async () => {
 
   const inputs = ["username", "email", "password"]
   // const body = {username:'', email:'', password:''}
-  let body = { user: {} }
+  let body = { }
 
   let signUpDiv = cecl("div", "sign-up")
   let form = cecl("form", "login-form")
@@ -38,9 +33,11 @@ export const Signup = async () => {
     input.setAttribute(`id`, el)
     input.setAttribute(`name`, el)
     input.addEventListener("keyup", (e) => {
-      console.log(e.target.name, e.target.value)
-      body.user[e.target.name] = e.target.value
+     
+      body[e.target.name] = e.target.value
+      console.log(e.target.value, body)
     })
+    
   })
   const button = cecl("button", "submit-login")
   button.innerText = "signUp"
@@ -73,11 +70,13 @@ export const Signup = async () => {
     // let currentUser = await getCurrentUser()
     console.log(currentUser)
 
-    if (!currentUser && Object.keys(body.user).length !== 0) {
-      body = { auth: { ...body.user } }
-     
+    if (!currentUser && Object.keys(body).length !== 0) {
+      body = { auth: { ...body } }
+console.log(body)
       let user = await login(body)
       let currentUser = await verify()
+      console.log(currentUser)
+
       loginButton.innerText = currentUser && 'logout'
     } else {
       let resLogout = await logout()
