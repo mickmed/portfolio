@@ -13,14 +13,20 @@ export async function Technologies() {
     mainContentScrollable.removeChild(mainContentScrollable.lastChild)
   }
 
+  const user = await verify()
+  const technologies = mainContentScrollable.appendChild(cecl("div", "technologies"))
+  const techIcons = await getTechnologies()
+
   let newIconUrl = ''
   const handleChange = (e) => {
     console.log(e.target.name, e.target.value)
     newIconUrl = e.target.value
   }
-  const user = await verify()
-  const technologies = mainContentScrollable.appendChild(cecl("div", "technologies"))
-  const techIcons = await getTechnologies()
+
+  const update = (e, body, id) => {
+    e.preventDefault()
+    updateTechnology(body, id)
+  }
 
   techIcons.forEach((tech, index) => {
     let icon = cecl('img', 'tech-icon')
@@ -40,9 +46,9 @@ export async function Technologies() {
 
       })
       const button = Button('update-tech-icon-btn', 'submit', 'update icon url')
-      button.addEventListener('click', () => {
+      form.addEventListener('submit', (e) => {
         console.log(tech.id)
-        updateTechnology({ ...tech, icon_url: newIconUrl }, tech.id)
+        update(e, { ...tech, icon_url: newIconUrl }, tech.id)
       })
       form.appendChild(button)
     }
