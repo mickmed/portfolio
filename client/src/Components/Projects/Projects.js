@@ -78,10 +78,15 @@ export async function Projects() {
     ADD LINK MODAL
     ***************/
     imgWrapper[index].addEventListener("click", async () => {
+      
+      console.log('is it so')
+     
       if (bool === "true") {
         bool = "false"
         innerImgWrap[index].classList.add("close-curtain")
         innerImgWrap[index].classList.remove("open-curtain")
+        // console.log(lastChild)
+        innerImgWrap[index].lastChild.remove()
         imgWrapper[index].lastChild.remove()
 
 
@@ -94,9 +99,7 @@ export async function Projects() {
 
         projectWrap.classList.remove("project-wrap-click")
 
-        image.lastChild.remove()
-
-        // innerImgWrap[index].style.height = '100%'
+      
 
       } else if (bool === "false") {
         console.log(bool)
