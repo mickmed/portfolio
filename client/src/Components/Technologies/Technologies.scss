@@ -1,8 +1,11 @@
 .technologies{
     display:flex;
     flex-wrap:wrap;
-    width:100%;
+    width:80%;
+    justify-content: center;
+    
     .tech-icon{
         width:10%;
+        padding:5%;
     }
 }

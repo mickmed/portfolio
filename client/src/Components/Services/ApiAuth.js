@@ -12,7 +12,7 @@ export function setHeaders(headers) {
   }
 }
 
-export function clearHeaders(headers) {
+export const clearHeaders = (headers) => {
   return {
     ...headers,
     Authorization: null,
@@ -31,6 +31,7 @@ export const signUp = async (body) => {
       return json.json()
     })
     .then((data) => {
+
       localStorage.setItem("authToken", data.token)
 
       return data
@@ -39,6 +40,7 @@ export const signUp = async (body) => {
 }
 
 export const login = async (body) => {
+  console.log(body)
   let res = await fetch(baseUrl + "/auth/login", {
     method: "post",
     headers: { "Content-Type": "application/json" },
@@ -46,13 +48,16 @@ export const login = async (body) => {
   })
     .then((json) => {
       return json.json()
+
     })
     .then((data) => {
+      // console.log(data)
       localStorage.setItem("authToken", data.token)
+
 
       return data
     })
-
+  console.log(res)
   return res
 }
 

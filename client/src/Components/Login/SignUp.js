@@ -1,5 +1,4 @@
 import {
- 
   signUp,
   login,
   verify,
@@ -9,21 +8,20 @@ import { cecl, qs } from "../Helpers/domHelper.js"
 import "./signup.scss"
 
 
-
-
 export const Signup = async () => {
- 
+
   let mainContent = qs(".main-content-scrollable")
   while (mainContent.childNodes.length > 1) {
     mainContent.removeChild(mainContent.lastChild)
   }
-
+  
+  /*************
+     MAKE FORM
+   ************/
   const inputs = ["username", "email", "password"]
-  // const body = {username:'', email:'', password:''}
-  let body = { }
-
-  let signUpDiv = cecl("div", "sign-up")
-  let form = cecl("form", "login-form")
+  let body = {}
+  const signUpDiv = cecl("div", "sign-up")
+  const form = cecl("form", "login-form")
 
   inputs.map((el) => {
     let label = form.appendChild(cecl(`label`, `login-label`))
@@ -33,12 +31,26 @@ export const Signup = async () => {
     input.setAttribute(`id`, el)
     input.setAttribute(`name`, el)
     input.addEventListener("keyup", (e) => {
-     
+
       body[e.target.name] = e.target.value
       console.log(e.target.value, body)
     })
-    
+
   })
+
+ /*****************
+    GET CURR USER
+  ****************/
+  let currentUser = await verify()
+  console.log(currentUser)
+  if (currentUser.errors) {
+    console.log('logout due to error')
+    logout()
+  }
+
+  /*************
+    SING UP BTN
+   ************/
   const button = cecl("button", "submit-login")
   button.innerText = "signUp"
   form.appendChild(button)
@@ -49,41 +61,32 @@ export const Signup = async () => {
     console.log(signUpRes)
   })
 
-  let loginButton = cecl("button", "login")
+  /*************
+     LOGIN BTN
+   ************/
+  const loginButton = cecl("button", "login")
   loginButton.classList.add('login-btn')
-
-  
-  let currentUser = await verify()
-  if(currentUser.errors){
-    console.log('logout due to error')
-    logout()
-    let loginButton = cecl("button", "login")
-
-
-  }
-  
-
-  loginButton.innerText = currentUser ? 'logout' : 'login' 
-  
+  loginButton.innerText = currentUser ? 'logout' : 'login'
 
   loginButton.addEventListener("click", async () => {
-    // let currentUser = await getCurrentUser()
     console.log(currentUser)
-
-    if (!currentUser && Object.keys(body).length !== 0) {
+    if (!currentUser && Object.keys(body).length !== 0 && !localStorage.authToken) {
       body = { auth: { ...body } }
-console.log(body)
+      // console.log(body)
       let user = await login(body)
-      let currentUser = await verify()
+      // console.log(user)
+      currentUser = await verify()
       console.log(currentUser)
 
       loginButton.innerText = currentUser && 'logout'
     } else {
       let resLogout = await logout()
+      console.log(resLogout)
 
-      if (resLogout) {
+
+      if (resLogout === 'logged out') {
         loginButton.innerText = "login"
-        
+
       }
     }
   })
@@ -92,5 +95,5 @@ console.log(body)
   signUpDiv.appendChild(loginButton)
   mainContent.appendChild(signUpDiv)
 
-  
+
 }

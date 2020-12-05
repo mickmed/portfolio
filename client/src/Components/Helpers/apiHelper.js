@@ -41,12 +41,13 @@ export const signUp = async (body) => {
   let res = await fetch(BASE_URL + "/users", {
     method: "post",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: body,
   })
     .then((json) => {
       return json.json()
     })
     .then((data) => {
+      console.log(data)
       localStorage.setItem("authToken", data.token)
 
       return data

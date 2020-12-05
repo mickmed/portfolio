@@ -1,11 +1,8 @@
 // import "../Shared/Image"
 import { qs, qsa, cecl, ac, btn } from "../Helpers/domHelper"
 import { verify } from "../Services/ApiAuth.js"
-import { getTechnologies } from "../Services/ApiTech.js"
 import { Image } from "../Shared/Image.js"
 import { Footer } from "../Footer/Footer.js"
-
-
 import {
   getProjects,
   deleteProject,
@@ -27,11 +24,10 @@ const clearPage = (element) => {
 export async function Projects() {
 
   const mainContent = qs('.scrollable-content')
-  // console.log('contenta', contenta)
-  // let mainContent = qs(".main-content-scrollable")
   clearPage(mainContent)
   let loading = mainContent.appendChild(cecl("div", "loading"))
   loading.innerHTML = "loading..."
+  const user = await verify()
 
 
   /**************
@@ -40,23 +36,16 @@ export async function Projects() {
   const resp = await getProjects()
   clearPage(mainContent)
 
-
   const containerWidth = mainContent.clientWidth
-  // const scrollableContent = cecl('div', 'scrollable-content')
-  // mainContent.appendChild(scrollableContent)
-
   resp.forEach(async (project, index) => {
-
-
 
     const projectWrap = mainContent.appendChild(cecl("div", "project-wrap"))
     const image = projectWrap.appendChild(
       Image(`src/img/${project.img_url}`, project.name, true, project.site_url, project.build_date)
     )
-    console.log(image)
+   
     let bool = "false"
     let linkModal = cecl("div", "link-modal")
-
     let imgWrapper = qsa(".img-wrapper")
     let innerImgWrap = qsa(".inner-img-wrap")
     let techIcons = cecl("div", "tech-icons")
@@ -69,20 +58,13 @@ export async function Projects() {
 
     if (containerWidth < 900) {
       linkModal.appendChild(techIcons)
-
       linkModal.appendChild(description)
-
     } else {
-
       linkModal.appendChild(description)
       linkModal.appendChild(techIcons)
-
     }
 
-
-
-    let linkModalIcons = linkModal.appendChild(cecl('div', 'link-modal-icons'))
-
+    const linkModalIcons = linkModal.appendChild(cecl('div', 'link-modal-icons'))
 
     linkModalIcons.innerHTML =
       `<div><a href=${project.site_url} target='_blank'><i class="fas fa-home fa-fw"></i></a>
@@ -90,13 +72,6 @@ export async function Projects() {
 
     <div><a href=${project.github_url} target='_blank'><i class="fab fa-github"></i></a>
     <p class='github-tool-tip'>github</p></div>`
-
-
-    console.log(innerImgWrap[0].children[1])
-
-
-
-
 
 
     /**************
@@ -177,7 +152,9 @@ export async function Projects() {
     /*******************
      EDIT PROJECT BUTTON
     ********************/
-    if (await verify()) {
+   
+    if (user && user.isAdmin) {
+
       const editProjectWrapper = cecl("div", "edit-project-wrapper")
       const editButton = Button("show-edit-button", "submit", "update")
       editButton.addEventListener("click", () => {
@@ -202,7 +179,6 @@ export async function Projects() {
         answer && await Projects()
       })
       editProjectWrapper.appendChild(deleteButton)
-
       projectWrap.appendChild(editProjectWrapper)
     }
   })
@@ -210,7 +186,7 @@ export async function Projects() {
   /***********
   ADD PROJECT 
   ************/
-  if (await verify()) {
+  if (user && user.isAdmin) {
 
     let addBtn = Button("show-add-form", "submit", "add project")
     addBtn.addEventListener("click", () => {
@@ -224,12 +200,6 @@ export async function Projects() {
 
     ac(mainContent, addBtn)
   }
-
-  // //down button
-
-  // const seeMoreBtn = Button('see-more-btn', 'submit', 'see more')
-
-  // ac(mainContent, seeMoreBtn)
 
   mainContent.appendChild(Footer())
 

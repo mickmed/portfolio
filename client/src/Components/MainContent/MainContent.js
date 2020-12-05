@@ -22,7 +22,7 @@ export const MainContent = () => {
 
   const gohere = (e) => {
 
-console.log(mainContentScrollable.scrollTop)
+console.log(localStorage)
 
     if (mainContentScrollable.scrollTop < 50) {
       console.log('zero')
