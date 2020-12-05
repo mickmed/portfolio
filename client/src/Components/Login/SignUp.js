@@ -49,7 +49,7 @@ export const Signup = async () => {
   }
 
   /*************
-    SING UP BTN
+    SIGN UP BTN
    ************/
   const button = cecl("button", "submit-login")
   button.innerText = "signUp"

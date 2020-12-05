@@ -31,7 +31,7 @@ export async function Technologies() {
 
       let name = cecl('div', 'name')
       name.innerText = tech.name
-      const form = Form()
+      const form = Form('tech-icon-form')
       const input = Input({ className: 'techIconInput', name: tech.name, type: 'text', value: tech.icon_url, placeholder: 'tech-icon-url', handleChange })
       form.appendChild(input)
       technologies.appendChild(form)
@@ -44,7 +44,7 @@ export async function Technologies() {
         console.log(tech.id)
         updateTechnology({ ...tech, icon_url: newIconUrl }, tech.id)
       })
-      technologies.appendChild(button)
+      form.appendChild(button)
     }
 
 
