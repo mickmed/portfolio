@@ -79,7 +79,7 @@ export async function Projects() {
     ***************/
     imgWrapper[index].addEventListener("click", async () => {
       
-      console.log('is it so')
+     
      
       if (bool === "true") {
         bool = "false"
@@ -102,11 +102,13 @@ export async function Projects() {
       
 
       } else if (bool === "false") {
-        console.log(bool)
+       console.log('true')
         bool = "true"
         innerImgWrap[index].classList.add("open-curtain")
         innerImgWrap[index].classList.remove("close-curtain")
         imgWrapper[index].appendChild(linkModal)
+        projectWrap.style.margin = '0 10% 7% 10%'
+
 
 
         if (containerWidth < 900) {
@@ -120,7 +122,7 @@ export async function Projects() {
           imgWrapper[index].style.width = '90%'
           imgWrapper[index].style.padding = '2%'
           imgWrapper[index].style.margin = '0 auto'
-          projectWrap.style.margin = '0 1%'
+          // projectWrap.style.margin = '0 1%'
 
           innerImgWrap[index].style.width = '99%'
           innerImgWrap[index].style.height = '99%'
