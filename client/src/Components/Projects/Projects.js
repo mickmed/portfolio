@@ -107,7 +107,7 @@ export async function Projects() {
         innerImgWrap[index].classList.add("open-curtain")
         innerImgWrap[index].classList.remove("close-curtain")
         imgWrapper[index].appendChild(linkModal)
-        projectWrap.style.margin = '0 10% 7% 10%'
+        projectWrap.style.margin = '0 5% 5% 5%'
 
 
 
