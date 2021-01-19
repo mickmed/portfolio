@@ -23,9 +23,7 @@ export const EditProject = async (projectWrap, project, addProject) => {
   let newProject = {}
 
   let handleChange = (e) => {
-    console.log(e.target.name, e.target.value)
     newProject[e.target.name] = e.target.value
-    console.log('cmon', newProject)
   }
 
   let form = Form("edit-project-form")
@@ -96,15 +94,12 @@ export const EditProject = async (projectWrap, project, addProject) => {
   ***********/
   form.addEventListener("submit", async (evt) => {
     evt.preventDefault()
-    console.log("add", addProject)
 
     const checkboxes = document.querySelectorAll("input[type=checkbox]:checked")
-    console.log(checkboxes, newProject)
     newProject.technologies = []
     checkboxes.forEach((box) => {
       newProject.technologies.push(box.value)
     })
-    console.log("add", newProject)
     addProject === "addProject"
       ? await addNewProject(newProject)
       : await updateProject(newProject, project.id)
