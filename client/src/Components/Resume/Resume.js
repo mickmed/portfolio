@@ -21,7 +21,7 @@ export async function Resume() {
 
 
   const link = cecl('a', 'link')
-  link.href = "https://www.keepandshare.com/doc9/25242/mickrothresume-pdf-25k?da=y"
+  link.href = "https://www.keepandshare.com/doc9/25959/mickrothresume-pdf-973k?da=y"
   link.innerHTML = 'link to original document'
   link.target = '_blank'
 
