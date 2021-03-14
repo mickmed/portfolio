@@ -68,16 +68,6 @@ export async function Projects() {
       let techIcon = techIcons.appendChild(cecl("img", "tech-icon"));
       techIcon.src = `src/img/${icon.icon_url}`;
     });
-    let description = cecl("div", "description");
-    description.innerHTML = project.description;
-
-    if (containerWidth < 900) {
-      // linkModal.appendChild(techIcons);
-      linkModal.appendChild(description);
-    } else {
-      linkModal.appendChild(description);
-      // innerImgWrap.appendChild(techIcons);
-    }
 
     const linkModalIcons = linkModal.appendChild(
       cecl("div", "link-modal-icons")
@@ -88,7 +78,16 @@ export async function Projects() {
 
     <div><a href=${project.github_url} target='_blank'><i class="fab fa-github"></i></a>
     <p class='github-tool-tip'>github</p></div>`;
+    let description = cecl("div", "description");
+    description.innerHTML = project.description;
 
+    if (containerWidth < 900) {
+      // linkModal.appendChild(techIcons);
+      linkModal.appendChild(description);
+    } else {
+      linkModal.appendChild(description);
+      // innerImgWrap.appendChild(techIcons);
+    }
     /**************
     ADD LINK MODAL
     ***************/
