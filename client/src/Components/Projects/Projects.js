@@ -72,7 +72,7 @@ export async function Projects() {
     description.innerHTML = project.description;
 
     if (containerWidth < 900) {
-      linkModal.appendChild(techIcons);
+      // linkModal.appendChild(techIcons);
       linkModal.appendChild(description);
     } else {
       linkModal.appendChild(description);
@@ -118,7 +118,7 @@ export async function Projects() {
         projectWrap.style.margin = "0 5% 5% 5%";
 
         if (containerWidth < 900) {
-          imgWrapper[index].style.flexDirection = "column";
+          imgWrapper.style.flexDirection = "column";
           linkModal.style.width = "90%";
           techIcons.style.width = "80%";
           linkModal.style.marginTop = "5%";
