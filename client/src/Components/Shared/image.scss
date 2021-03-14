@@ -20,8 +20,10 @@
     padding: 0 5%;
     transform: translateY(-50%);
     // margin: 0 auto;
+    align-items:center;
     .tech-icon {
       width: 10%;
+      
     }
   }
   .link-modal-icons {
@@ -277,6 +279,7 @@
       margin: 0 auto;
       .tech-icon {
         width: 8%;
+        height:3%;
       }
     }
   }
