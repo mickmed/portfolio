@@ -9,9 +9,6 @@ import './Resume.scss'
 const loc = window.location.origin
 const PdfFile = `${loc}/src/img/mickrothresume.pdf`
 
-
-
-
 export async function Resume() {
   console.log('pdf')
   let mainContentScrollable = qs(".scrollable-content")

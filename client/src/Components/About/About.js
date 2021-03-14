@@ -49,6 +49,8 @@ export async function About() {
     target = "_blank"
   })
   image.style.cursor = "pointer"
+
+  
   aboutImageWrapper.appendChild(image)
   mainContentScrollable.appendChild(aboutImageWrapper)
   let description1 = mainContentScrollable.appendChild(cecl("div", "text"))
